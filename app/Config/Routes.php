@@ -35,7 +35,34 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+
+// DASHBOARD
+$routes->get('/', 'Dashboard::index');
+
+// KEUANGAN
+$routes->get('/keuangan/pendapatan', 'Keuangan::DataPendapatan');
+$routes->get('/keuangan/edit-pendapatan', 'Keuangan::EditPendapatan');
+$routes->get('/keuangan/pengeluaran', 'Keuangan::DataPengeluaran');
+$routes->get('/keuangan/edit-pengeluaran', 'Keuangan::EditPengeluaran');
+
+// MASTER POLI
+$routes->get('/master-poli/poli', 'MasterPoli::DataPoli');
+$routes->get('/master-poli/edit-poli', 'MasterPoli::EditPoli');
+$routes->get('/master-poli/tindakan', 'MasterPoli::DataTindakan');
+$routes->get('/master-poli/edit-tindakan', 'MasterPoli::EditTindakan');
+$routes->get('/master-poli/obat', 'MasterPoli::DataObat');
+$routes->get('/master-poli/edit-obat', 'MasterPoli::EditObat');
+
+// PASIEN
+$routes->get('/pasien', 'Pasien::index');
+$routes->get('/pasien/edit', 'Pasien::EditPasien');
+
+// RIWAYAT
+$routes->get('/riwayat', 'Riwayat::index');
+$routes->get('/riwayat/edit', 'Riwayat::EditRiwayat');
+
+// TINDAKAN
+$routes->get('/tindakan', 'Tindakan::index');
 
 /*
  * --------------------------------------------------------------------
