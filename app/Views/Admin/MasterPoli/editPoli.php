@@ -25,9 +25,12 @@ $this->section('content');
                             <label for="tarifpoli">Tarif Poli</label>
                             <input type="text" class="form-control" id="tarifpoli" placeholder="ex: 100.000">
                         </div>
-                        <div class="form-group m-b-50">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Password">
+                        <div class="form-group">
+                            <label for="status">Status</label>
+                            <select id="status" class="form-control">
+                                <option value="Aktif">Aktif</option>
+                                <option value="Tidak Aktif">Tdak Aktif</option>
+                            </select>
                         </div>
                         <div class="row">
                             <div class="col-12 d-flex justify-content-end p-h-30">
