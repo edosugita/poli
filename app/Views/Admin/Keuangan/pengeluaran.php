@@ -34,165 +34,132 @@ $this->section('content');
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td>Laporan Realisasi Anggaran</td>
-                                        <td>2022</td>
-                                        <td>Januari</td>
+                                        <td>Poli Anak</td>
+                                        <td>100.000</td>
+                                        <td>1/28/17</td>
                                         <td>Out</td>
                                         <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-cloud-download" style="color: #16D090;"></i>
-                                            </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pengeluaran') ?>'">
+                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pendapatan') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <td>Laporan Realisasi Anggaran</td>
-                                        <td>2022</td>
-                                        <td>Januari</td>
+                                        <td>Poli Anak</td>
+                                        <td>100.000</td>
+                                        <td>1/28/17</td>
                                         <td>Out</td>
                                         <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-cloud-download" style="color: #16D090;"></i>
-                                            </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pengeluaran') ?>'">
+                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pendapatan') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
-                                        <td>Laporan Realisasi Anggaran</td>
-                                        <td>2022</td>
-                                        <td>Januari</td>
+                                        <td>Poli Anak</td>
+                                        <td>100.000</td>
+                                        <td>1/28/17</td>
                                         <td>Out</td>
                                         <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-cloud-download" style="color: #16D090;"></i>
-                                            </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pengeluaran') ?>'">
+                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pendapatan') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>4</td>
-                                        <td>Laporan Realisasi Anggaran</td>
-                                        <td>2022</td>
-                                        <td>Januari</td>
+                                        <td>Poli Anak</td>
+                                        <td>100.000</td>
+                                        <td>1/28/17</td>
                                         <td>Out</td>
                                         <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-cloud-download" style="color: #16D090;"></i>
-                                            </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pengeluaran') ?>'">
+                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pendapatan') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>5</td>
-                                        <td>Laporan Realisasi Anggaran</td>
-                                        <td>2022</td>
-                                        <td>Januari</td>
+                                        <td>Poli Anak</td>
+                                        <td>100.000</td>
+                                        <td>1/28/17</td>
                                         <td>Out</td>
                                         <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-cloud-download" style="color: #16D090;"></i>
-                                            </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pengeluaran') ?>'">
+                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pendapatan') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>6</td>
-                                        <td>Laporan Realisasi Anggaran</td>
-                                        <td>2022</td>
-                                        <td>Januari</td>
+                                        <td>Poli Anak</td>
+                                        <td>100.000</td>
+                                        <td>1/28/17</td>
                                         <td>Out</td>
                                         <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-cloud-download" style="color: #16D090;"></i>
-                                            </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pengeluaran') ?>'">
+                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pendapatan') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>7</td>
-                                        <td>Laporan Realisasi Anggaran</td>
-                                        <td>2022</td>
-                                        <td>Januari</td>
+                                        <td>Poli Anak</td>
+                                        <td>100.000</td>
+                                        <td>1/28/17</td>
                                         <td>Out</td>
                                         <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-cloud-download" style="color: #16D090;"></i>
-                                            </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pengeluaran') ?>'">
+                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pendapatan') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>8</td>
-                                        <td>Laporan Realisasi Anggaran</td>
-                                        <td>2022</td>
-                                        <td>Januari</td>
+                                        <td>Poli Anak</td>
+                                        <td>100.000</td>
+                                        <td>1/28/17</td>
                                         <td>Out</td>
                                         <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-cloud-download" style="color: #16D090;"></i>
-                                            </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pengeluaran') ?>'">
+                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pendapatan') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>9</td>
-                                        <td>Laporan Realisasi Anggaran</td>
-                                        <td>2022</td>
-                                        <td>Januari</td>
+                                        <td>Poli Anak</td>
+                                        <td>100.000</td>
+                                        <td>1/28/17</td>
                                         <td>Out</td>
                                         <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-cloud-download" style="color: #16D090;"></i>
-                                            </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pengeluaran') ?>'">
+                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pendapatan') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>10</td>
-                                        <td>Laporan Realisasi Anggaran</td>
-                                        <td>2022</td>
-                                        <td>Januari</td>
+                                        <td>Poli Anak</td>
+                                        <td>100.000</td>
+                                        <td>1/28/17</td>
                                         <td>Out</td>
                                         <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-cloud-download" style="color: #16D090;"></i>
-                                            </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pengeluaran') ?>'">
+                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pendapatan') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>11</td>
-                                        <td>Laporan Realisasi Anggaran</td>
-                                        <td>2022</td>
-                                        <td>Januari</td>
+                                        <td>Poli Anak</td>
+                                        <td>100.000</td>
+                                        <td>1/28/17</td>
                                         <td>Out</td>
                                         <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-cloud-download" style="color: #16D090;"></i>
-                                            </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pengeluaran') ?>'">
+                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pendapatan') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                             </button>
                                         </td>

@@ -25,6 +25,9 @@
                         <a href="<?= base_url('/master-poli/poli') ?>">Master Poli</a>
                     </li>
                     <li>
+                        <a href="<?= base_url('/master-poli/dokter') ?>">Master Dokter</a>
+                    </li>
+                    <li>
                         <a href="<?= base_url('/master-poli/tindakan') ?>">Master Tindakan</a>
                     </li>
                     <li>

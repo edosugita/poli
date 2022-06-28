@@ -55,6 +55,8 @@ $routes->get('/master-poli/tindakan', 'MasterPoli::DataTindakan');
 $routes->get('/master-poli/edit-tindakan', 'MasterPoli::EditTindakan');
 $routes->get('/master-poli/obat', 'MasterPoli::DataObat');
 $routes->get('/master-poli/edit-obat', 'MasterPoli::EditObat');
+$routes->get('/master-poli/dokter', 'MasterPoli::DataDokter');
+$routes->get('/master-poli/edit-dokter', 'MasterPoli::EditDokter');
 
 // PASIEN
 $routes->get('/pasien', 'Pasien::index');
