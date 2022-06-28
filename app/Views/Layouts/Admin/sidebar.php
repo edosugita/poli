@@ -15,20 +15,20 @@
                     <span class="icon-holder">
                         <i class="anticon anticon-appstore"></i>
                     </span>
-                    <span class="title">Master Poli</span>
+                    <span class="title">Master</span>
                     <span class="arrow">
                         <i class="arrow-icon"></i>
                     </span>
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="<?= base_url('/master-poli/poli') ?>">Poli</a>
+                        <a href="<?= base_url('/master-poli/poli') ?>">Master Poli</a>
                     </li>
                     <li>
-                        <a href="<?= base_url('/master-poli/tindakan') ?>">Tindakan</a>
+                        <a href="<?= base_url('/master-poli/tindakan') ?>">Master Tindakan</a>
                     </li>
                     <li>
-                        <a href="<?= base_url('/master-poli/obat') ?>">Obat</a>
+                        <a href="<?= base_url('/master-poli/obat') ?>">Master Obat</a>
                     </li>
                 </ul>
             </li>

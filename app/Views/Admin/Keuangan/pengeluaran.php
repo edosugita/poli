@@ -45,9 +45,6 @@ $this->section('content');
                                             <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pengeluaran') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                             </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-delete" style="color: #BF0603;"></i>
-                                            </button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -62,9 +59,6 @@ $this->section('content');
                                             </button>
                                             <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pengeluaran') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
-                                            </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-delete" style="color: #BF0603;"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -81,9 +75,6 @@ $this->section('content');
                                             <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pengeluaran') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                             </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-delete" style="color: #BF0603;"></i>
-                                            </button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -98,9 +89,6 @@ $this->section('content');
                                             </button>
                                             <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pengeluaran') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
-                                            </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-delete" style="color: #BF0603;"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -117,9 +105,6 @@ $this->section('content');
                                             <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pengeluaran') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                             </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-delete" style="color: #BF0603;"></i>
-                                            </button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -134,9 +119,6 @@ $this->section('content');
                                             </button>
                                             <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pengeluaran') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
-                                            </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-delete" style="color: #BF0603;"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -153,9 +135,6 @@ $this->section('content');
                                             <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pengeluaran') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                             </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-delete" style="color: #BF0603;"></i>
-                                            </button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -170,9 +149,6 @@ $this->section('content');
                                             </button>
                                             <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pengeluaran') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
-                                            </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-delete" style="color: #BF0603;"></i>
                                             </button>
                                         </td>
                                     </tr>
@@ -189,9 +165,6 @@ $this->section('content');
                                             <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pengeluaran') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                             </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-delete" style="color: #BF0603;"></i>
-                                            </button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -207,9 +180,6 @@ $this->section('content');
                                             <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pengeluaran') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                             </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-delete" style="color: #BF0603;"></i>
-                                            </button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -224,9 +194,6 @@ $this->section('content');
                                             </button>
                                             <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/keuangan/edit-pengeluaran') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
-                                            </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-delete" style="color: #BF0603;"></i>
                                             </button>
                                         </td>
                                     </tr>
