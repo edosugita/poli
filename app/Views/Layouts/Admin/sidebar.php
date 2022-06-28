@@ -22,16 +22,16 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="<?= base_url('/master-poli/poli') ?>">Master Poli</a>
+                        <a href="<?= base_url('/master-poli/poli') ?>">Poli</a>
                     </li>
                     <li>
-                        <a href="<?= base_url('/master-poli/dokter') ?>">Master Dokter</a>
+                        <a href="<?= base_url('/master-poli/dokter') ?>">Dokter</a>
                     </li>
                     <li>
-                        <a href="<?= base_url('/master-poli/tindakan') ?>">Master Tindakan</a>
+                        <a href="<?= base_url('/master-poli/tindakan') ?>">Tindakan</a>
                     </li>
                     <li>
-                        <a href="<?= base_url('/master-poli/obat') ?>">Master Obat</a>
+                        <a href="<?= base_url('/master-poli/obat') ?>">Obat</a>
                     </li>
                 </ul>
             </li>
