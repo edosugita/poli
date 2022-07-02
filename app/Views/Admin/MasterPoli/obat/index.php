@@ -28,164 +28,28 @@ $this->section('content');
                                         <th>Nama Obat</th>
                                         <th>Harga</th>
                                         <th>Satuan</th>
+                                        <th>Penggunaan Obat</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>001</td>
-                                        <td>Paramex</td>
-                                        <td>100.000</td>
-                                        <td>PCS</td>
-                                        <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-obat') ?>'">
-                                                <i class="anticon anticon-form" style="color: #336CFB;"></i>
-                                            </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-delete" style="color: #BF0603;"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>002</td>
-                                        <td>Paramex</td>
-                                        <td>100.000</td>
-                                        <td>PCS</td>
-                                        <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-obat') ?>'">
-                                                <i class="anticon anticon-form" style="color: #336CFB;"></i>
-                                            </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-delete" style="color: #BF0603;"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>003</td>
-                                        <td>Paramex</td>
-                                        <td>100.000</td>
-                                        <td>PCS</td>
-                                        <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-obat') ?>'">
-                                                <i class="anticon anticon-form" style="color: #336CFB;"></i>
-                                            </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-delete" style="color: #BF0603;"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>004</td>
-                                        <td>Paramex</td>
-                                        <td>100.000</td>
-                                        <td>PCS</td>
-                                        <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-obat') ?>'">
-                                                <i class="anticon anticon-form" style="color: #336CFB;"></i>
-                                            </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-delete" style="color: #BF0603;"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>005</td>
-                                        <td>Paramex</td>
-                                        <td>100.000</td>
-                                        <td>PCS</td>
-                                        <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-obat') ?>'">
-                                                <i class="anticon anticon-form" style="color: #336CFB;"></i>
-                                            </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-delete" style="color: #BF0603;"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>006</td>
-                                        <td>Paramex</td>
-                                        <td>100.000</td>
-                                        <td>PCS</td>
-                                        <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-obat') ?>'">
-                                                <i class="anticon anticon-form" style="color: #336CFB;"></i>
-                                            </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-delete" style="color: #BF0603;"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>007</td>
-                                        <td>Paramex</td>
-                                        <td>100.000</td>
-                                        <td>PCS</td>
-                                        <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-obat') ?>'">
-                                                <i class="anticon anticon-form" style="color: #336CFB;"></i>
-                                            </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-delete" style="color: #BF0603;"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>008</td>
-                                        <td>Paramex</td>
-                                        <td>100.000</td>
-                                        <td>PCS</td>
-                                        <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-obat') ?>'">
-                                                <i class="anticon anticon-form" style="color: #336CFB;"></i>
-                                            </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-delete" style="color: #BF0603;"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>009</td>
-                                        <td>Paramex</td>
-                                        <td>100.000</td>
-                                        <td>PCS</td>
-                                        <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-obat') ?>'">
-                                                <i class="anticon anticon-form" style="color: #336CFB;"></i>
-                                            </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-delete" style="color: #BF0603;"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>010</td>
-                                        <td>Paramex</td>
-                                        <td>100.000</td>
-                                        <td>PCS</td>
-                                        <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-obat') ?>'">
-                                                <i class="anticon anticon-form" style="color: #336CFB;"></i>
-                                            </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-delete" style="color: #BF0603;"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>011</td>
-                                        <td>Paramex</td>
-                                        <td>100.000</td>
-                                        <td>PCS</td>
-                                        <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-obat') ?>'">
-                                                <i class="anticon anticon-form" style="color: #336CFB;"></i>
-                                            </button>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                <i class="anticon anticon-delete" style="color: #BF0603;"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
+                                    <?php foreach($dataObat as $obat) : ?>
+                                        <tr>
+                                            <td><?= $obat["kode"] ?></td>
+                                            <td><?= $obat["nama"] ?></td>
+                                            <td><?= $obat["harga"] ?></td>
+                                            <td><?= $obat["satuan"] ?></td>
+                                            <td><?= $obat["penggunaan_obat"] ?></td>
+                                            <td>
+                                                <a class="btn btn-icon btn-hover btn-sm btn-rounded" href='<?= base_url('/master/obat/' . $obat['id'] . '/edit' ) ?>'>
+                                                    <i class="anticon anticon-form" style="color: #336CFB;"></i>
+                                                </a>
+                                                <button class="btn btn-icon btn-hover btn-sm btn-rounded">
+                                                    <i class="anticon anticon-delete" style="color: #BF0603;"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>

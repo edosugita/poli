@@ -9,8 +9,10 @@ class ObatController extends BaseController
 {
     public function index()
     {
+        $obat = new Obat();
         $data = [
             'title' => 'Data Obat',
+            'dataObat' => $obat->findAll()
         ];
 
         return view('Admin/MasterPoli/obat/index', $data);
