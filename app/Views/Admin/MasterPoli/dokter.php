@@ -9,7 +9,7 @@ $this->section('content');
             <div class="card">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h5>Data Nama Obat</h5>
+                        <h5>Data Nama Dokter</h5>
                     </div>
                     <hr>
                     <div class="row m-b-30">

@@ -15,7 +15,7 @@
                     <span class="icon-holder">
                         <i class="anticon anticon-appstore"></i>
                     </span>
-                    <span class="title">Master Poli</span>
+                    <span class="title">Master</span>
                     <span class="arrow">
                         <i class="arrow-icon"></i>
                     </span>
@@ -23,6 +23,9 @@
                 <ul class="dropdown-menu">
                     <li>
                         <a href="<?= base_url('/master-poli/poli') ?>">Poli</a>
+                    </li>
+                    <li>
+                        <a href="<?= base_url('/master-poli/dokter') ?>">Dokter</a>
                     </li>
                     <li>
                         <a href="<?= base_url('/master-poli/tindakan') ?>">Tindakan</a>
