@@ -5,6 +5,26 @@ $this->section('content');
 
 <div class="main-content">
     <div class="row">
+        <?php if (!empty(session()->getFlashdata('success'))) : ?>
+            <div class="col-12">
+                <div class="alert alert-success alert-dismissible fade show">
+                    <?= session()->getFlashdata('success'); ?>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        <?php endif; ?>
+        <?php if (!empty(session()->getFlashdata('fail'))) : ?>
+            <div class="col-12">
+                <div class="alert alert-danger alert-dismissible fade show">
+                    <?= session()->getFlashdata('fail'); ?>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        <?php endif; ?>
         <div class="col-md-6 col-lg-3">
             <div class="card">
                 <div class="card-body">

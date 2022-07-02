@@ -37,44 +37,56 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 
 // AUTH
-$routes->get('/login', 'Auth::index');
+$routes->match(['get', 'post'], '/login', 'Auth::index', ['filter' => 'noauth']);
 
-// DASHBOARD
-$routes->get('/', 'Dashboard::index');
+$routes->group('', ['filter' => 'auth'], function ($routes) {
 
-// KEUANGAN
-$routes->get('/keuangan/pendapatan', 'Keuangan::DataPendapatan');
-$routes->get('/keuangan/edit-pendapatan', 'Keuangan::EditPendapatan');
-$routes->get('/keuangan/pengeluaran', 'Keuangan::DataPengeluaran');
-$routes->get('/keuangan/edit-pengeluaran', 'Keuangan::EditPengeluaran');
+    // AUTH
+    $routes->match(['get', 'post'], '/logout', 'Auth::logout');
 
-// MASTER POLI
-$routes->get('/master-poli/poli', 'MasterPoli::DataPoli');
-$routes->get('/master-poli/edit-poli', 'MasterPoli::EditPoli');
-$routes->get('/master-poli/tindakan', 'MasterPoli::DataTindakan');
-$routes->get('/master-poli/edit-tindakan', 'MasterPoli::EditTindakan');
+    // DASHBOARD
+    $routes->get('/', 'Dashboard::index');
 
-// Master | Obat
-$routes->group('/master/obat', function($routes) {
-    $routes->get('/', 'ObatController::index');
-    $routes->post('/', 'ObatController::new');
-    $routes->get('(:num)/edit', 'ObatController::edit/$1');
-    $routes->put('(:num)/edit', 'ObatController::update/$1');
+    // KEUANGAN
+    $routes->get('/keuangan/pendapatan', 'Keuangan::DataPendapatan');
+    $routes->get('/keuangan/edit-pendapatan', 'Keuangan::EditPendapatan');
+    $routes->get('/keuangan/pengeluaran', 'Keuangan::DataPengeluaran');
+    $routes->get('/keuangan/edit-pengeluaran', 'Keuangan::EditPengeluaran');
+
+    // Master | Poli
+
+    $routes->group('/master/poli', function ($routes) {
+        $routes->match(['get', 'post'], '/', 'PoliController::index');
+        $routes->match(['get', 'post'], '(:num)/edit', 'PoliController::edit/$1');
+    });
+
+    // Master | Tindakan
+    $routes->get('/master/tindakan', 'MasterPoli::DataTindakan');
+    $routes->get('/master/edit-tindakan', 'MasterPoli::EditTindakan');
+
+    // Master | Obat
+    $routes->group('/master/obat', function ($routes) {
+        $routes->get('/', 'ObatController::index');
+        $routes->post('/', 'ObatController::new');
+        $routes->get('(:num)/edit', 'ObatController::edit/$1');
+        $routes->put('(:num)/edit', 'ObatController::update/$1');
+    });
+
+    // Master | Dokter
+    $routes->get('/master/dokter', 'MasterPoli::DataDokter');
+    $routes->get('/master/edit-dokter', 'MasterPoli::EditDokter');
+
+    // PASIEN
+    $routes->get('/pasien', 'Pasien::index');
+    $routes->get('/pasien/edit', 'Pasien::EditPasien');
+
+    // RIWAYAT
+    $routes->get('/riwayat', 'Riwayat::index');
+    $routes->get('/riwayat/edit', 'Riwayat::EditRiwayat');
+
+    // TINDAKAN
+    $routes->get('/tindakan', 'Tindakan::index');
 });
-
-$routes->get('/master-poli/dokter', 'MasterPoli::DataDokter');
-$routes->get('/master-poli/edit-dokter', 'MasterPoli::EditDokter');
-
-// PASIEN
-$routes->get('/pasien', 'Pasien::index');
-$routes->get('/pasien/edit', 'Pasien::EditPasien');
-
-// RIWAYAT
-$routes->get('/riwayat', 'Riwayat::index');
-$routes->get('/riwayat/edit', 'Riwayat::EditRiwayat');
-
-// TINDAKAN
-$routes->get('/tindakan', 'Tindakan::index');
 
 /*
  * --------------------------------------------------------------------
