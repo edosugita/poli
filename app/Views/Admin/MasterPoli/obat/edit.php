@@ -12,26 +12,27 @@ $this->section('content');
                         <h5>Edit Data Obat</h5>
                     </div>
                     <hr>
-                    <form method="">
+                    <form method="POST" action="<?= site_url('master/obat/' . $dataObat['id'] . '/edit') ?>">
+                        <input type="hidden" name="_method" value="PUT" />
                         <div class="form-group">
-                            <label for="kodeobat">Kode Obat</label>
-                            <input type="text" class="form-control" id="kodeobat" placeholder="ex: KD01">
+                            <label for="kode">Kode Obat</label>
+                            <input type="text" class="form-control" name="kode" id="kode" placeholder="ex: KD01" value="<?= $dataObat['kode'] ?>">
                         </div>
                         <div class="form-group">
-                            <label for="namaobat">Nama Obat</label>
-                            <input type="text" class="form-control" id="namaobat" placeholder="ex: Paramex">
+                            <label for="nama">Nama Obat</label>
+                            <input type="text" class="form-control" name="nama" id="nama" placeholder="ex: Paramex" value="<?= $dataObat['nama'] ?>">
                         </div>
                         <div class="form-group">
-                            <label for="hargaobat">Harga Obat</label>
-                            <input type="text" class="form-control" id="hargaobat" placeholder="ex: 100.000">
+                            <label for="harga">Harga Obat</label>
+                            <input type="text" class="form-control" name="harga" id="harga" placeholder="ex: 100.000" value="<?= $dataObat['harga'] ?>">
                         </div>
                         <div class="form-group">
-                            <label for="satuanobat">Satuan</label>
-                            <input type="text" class="form-control" id="satuanobat" placeholder="ex: PCS">
+                            <label for="satuan">Satuan</label>
+                            <input type="text" class="form-control" name="satuan" id="satuan" placeholder="ex: PCS" value="<?= $dataObat['satuan'] ?>">
                         </div>
                         <div class="form-group">
-                            <label for="penggunaanobat">Penggunaan Obat</label>
-                            <input type="text" class="form-control" id="penggunaanobat" placeholder="ex: 1x Sehari">
+                            <label for="penggunaan_obat">Penggunaan Obat</label>
+                            <input type="text" class="form-control" name="penggunaan_obat" id="penggunaan_obat" placeholder="ex: 1x Sehari" value="<?= $dataObat['penggunaan_obat'] ?>">
                         </div>
                         <div class="row">
                             <div class="col-12 d-flex justify-content-end p-h-30">

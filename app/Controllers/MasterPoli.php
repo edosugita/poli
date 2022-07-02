@@ -49,7 +49,7 @@ class MasterPoli extends BaseController
         return view('Admin/MasterPoli/obat', $data);
     }
 
-    public function EditObat()
+    public function EditObat($id)
     {
         $data = [
             'title' => 'Edit Data Obat',

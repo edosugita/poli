@@ -53,8 +53,15 @@ $routes->get('/master-poli/poli', 'MasterPoli::DataPoli');
 $routes->get('/master-poli/edit-poli', 'MasterPoli::EditPoli');
 $routes->get('/master-poli/tindakan', 'MasterPoli::DataTindakan');
 $routes->get('/master-poli/edit-tindakan', 'MasterPoli::EditTindakan');
-$routes->get('/master-poli/obat', 'MasterPoli::DataObat');
-$routes->get('/master-poli/edit-obat', 'MasterPoli::EditObat');
+
+// Master | Obat
+$routes->group('/master/obat', function($routes) {
+    $routes->get('/', 'ObatController::index');
+    $routes->post('/', 'ObatController::new');
+    $routes->get('(:num)/edit', 'ObatController::edit/$1');
+    $routes->put('(:num)/edit', 'ObatController::update/$1');
+});
+
 $routes->get('/master-poli/dokter', 'MasterPoli::DataDokter');
 $routes->get('/master-poli/edit-dokter', 'MasterPoli::EditDokter');
 
