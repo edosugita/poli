@@ -9,13 +9,13 @@ $this->section('content');
             <div class="card">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h5>Data Nama Tindakan</h5>
+                        <h5>Data Nama Dokter</h5>
                     </div>
                     <hr>
                     <div class="row m-b-30">
                         <div class="col-12 d-flex justify-content-end p-h-30">
                             <div class="row">
-                                <button class="btn btn-primary" data-toggle="modal" data-target="#tambahTindakan"><i class="anticon anticon-plus m-r-20"></i> Tambah Tindakan</button>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#tambahObat"><i class="anticon anticon-plus m-r-20"></i> Tambah Obat</button>
                             </div>
                         </div>
                     </div>
@@ -24,131 +24,131 @@ $this->section('content');
                             <table id="data-table" class="table table-hover table-borderless">
                                 <thead style="background: #EBF0FF;">
                                     <tr>
-                                        <th>Kode Tindakan</th>
-                                        <th>Nama Tindakan</th>
+                                        <th>Kode Obat</th>
+                                        <th>Nama Obat</th>
                                         <th>Harga</th>
-                                        <th>Kode Poli</th>
+                                        <th>Satuan</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>001</td>
-                                        <td>Suntik Mati</td>
+                                        <td>Paramex</td>
                                         <td>100.000</td>
-                                        <td>109</td>
+                                        <td>PCS</td>
                                         <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-tindakan') ?>'">
+                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-obat') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>002</td>
-                                        <td>Suntik Mati</td>
+                                        <td>Paramex</td>
                                         <td>100.000</td>
-                                        <td>109</td>
+                                        <td>PCS</td>
                                         <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-tindakan') ?>'">
+                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-obat') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>003</td>
-                                        <td>Suntik Mati</td>
+                                        <td>Paramex</td>
                                         <td>100.000</td>
-                                        <td>109</td>
+                                        <td>PCS</td>
                                         <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-tindakan') ?>'">
+                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-obat') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>004</td>
-                                        <td>Suntik Mati</td>
+                                        <td>Paramex</td>
                                         <td>100.000</td>
-                                        <td>109</td>
+                                        <td>PCS</td>
                                         <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-tindakan') ?>'">
+                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-obat') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>005</td>
-                                        <td>Suntik Mati</td>
+                                        <td>Paramex</td>
                                         <td>100.000</td>
-                                        <td>109</td>
+                                        <td>PCS</td>
                                         <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-tindakan') ?>'">
+                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-obat') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>006</td>
-                                        <td>Suntik Mati</td>
+                                        <td>Paramex</td>
                                         <td>100.000</td>
-                                        <td>109</td>
+                                        <td>PCS</td>
                                         <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-tindakan') ?>'">
+                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-obat') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>007</td>
-                                        <td>Suntik Mati</td>
+                                        <td>Paramex</td>
                                         <td>100.000</td>
-                                        <td>109</td>
+                                        <td>PCS</td>
                                         <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-tindakan') ?>'">
+                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-obat') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>008</td>
-                                        <td>Suntik Mati</td>
+                                        <td>Paramex</td>
                                         <td>100.000</td>
-                                        <td>109</td>
+                                        <td>PCS</td>
                                         <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-tindakan') ?>'">
+                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-obat') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>009</td>
-                                        <td>Suntik Mati</td>
+                                        <td>Paramex</td>
                                         <td>100.000</td>
-                                        <td>109</td>
+                                        <td>PCS</td>
                                         <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-tindakan') ?>'">
+                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-obat') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>010</td>
-                                        <td>Suntik Mati</td>
+                                        <td>Paramex</td>
                                         <td>100.000</td>
-                                        <td>109</td>
+                                        <td>PCS</td>
                                         <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-tindakan') ?>'">
+                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-obat') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>011</td>
-                                        <td>Suntik Mati</td>
+                                        <td>Paramex</td>
                                         <td>100.000</td>
-                                        <td>109</td>
+                                        <td>PCS</td>
                                         <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-tindakan') ?>'">
+                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/master-poli/edit-obat') ?>'">
                                                 <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                             </button>
                                         </td>
@@ -156,7 +156,6 @@ $this->section('content');
                                 </tbody>
                             </table>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -164,12 +163,12 @@ $this->section('content');
     </div>
 </div>
 
-<!-- MODAL TAMBAH TINDAKAN -->
-<div class="modal fade" id="tambahTindakan">
+<!-- MODAL TAMBAH OBAT -->
+<div class="modal fade" id="tambahObat">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalCenterTitle">Tambah Tindakan</h5>
+                <h5 class="modal-title" id="exampleModalCenterTitle">Tambah Obat</h5>
                 <button type="button" class="close" data-dismiss="modal">
                     <i class="anticon anticon-close"></i>
                 </button>
@@ -177,20 +176,24 @@ $this->section('content');
             <form method="">
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="kodetindakan">Kode Tindakan</label>
-                        <input type="text" class="form-control" id="kodetindakan" placeholder="ex: KD01">
+                        <label for="kodeobat">Kode Obat</label>
+                        <input type="text" class="form-control" id="kodeobat" placeholder="ex: KD01">
                     </div>
                     <div class="form-group">
-                        <label for="namatindakan">Nama Tindakan</label>
-                        <input type="text" class="form-control" id="namatindakan" placeholder="ex: Paramex">
+                        <label for="namaobat">Nama Obat</label>
+                        <input type="text" class="form-control" id="namaobat" placeholder="ex: Paramex">
                     </div>
                     <div class="form-group">
-                        <label for="tariftindakan">Tarif</label>
-                        <input type="text" class="form-control" id="tariftindakan" placeholder="ex: 100.000">
+                        <label for="hargaobat">Harga Obat</label>
+                        <input type="text" class="form-control" id="hargaobat" placeholder="ex: 100.000">
                     </div>
                     <div class="form-group">
-                        <label for="kodepoli">Kode Poli</label>
-                        <input type="text" class="form-control" id="kodepoli" placeholder="ex: 1x Sehari">
+                        <label for="satuanobat">Satuan</label>
+                        <input type="text" class="form-control" id="satuanobat" placeholder="ex: PCS">
+                    </div>
+                    <div class="form-group">
+                        <label for="penggunaanobat">Penggunaan Obat</label>
+                        <input type="text" class="form-control" id="penggunaanobat" placeholder="ex: 1x Sehari">
                     </div>
                 </div>
                 <div class="modal-footer">

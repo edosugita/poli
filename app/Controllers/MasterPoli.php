@@ -57,4 +57,22 @@ class MasterPoli extends BaseController
 
         return view('Admin/MasterPoli/editObat', $data);
     }
+
+    public function DataDokter()
+    {
+        $data = [
+            'title' => 'Data Dokter',
+        ];
+
+        return view('Admin/MasterPoli/dokter', $data);
+    }
+
+    public function EditDokter()
+    {
+        $data = [
+            'title' => 'Edit Data Dokter',
+        ];
+
+        return view('Admin/MasterPoli/editDokter', $data);
+    }
 }

@@ -62,6 +62,9 @@ $routes->group('/master/obat', function($routes) {
     $routes->put('(:num)/edit', 'ObatController::update/$1');
 });
 
+$routes->get('/master-poli/dokter', 'MasterPoli::DataDokter');
+$routes->get('/master-poli/edit-dokter', 'MasterPoli::EditDokter');
+
 // PASIEN
 $routes->get('/pasien', 'Pasien::index');
 $routes->get('/pasien/edit', 'Pasien::EditPasien');
