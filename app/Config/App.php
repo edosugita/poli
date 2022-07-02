@@ -24,7 +24,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $baseURL = 'https://ilopdisty.herokuapp.com/';
+    public $baseURL = 'http://localhost:9000/';
 
     /**
      * --------------------------------------------------------------------------

@@ -206,27 +206,27 @@ $this->section('content');
                     <i class="anticon anticon-close"></i>
                 </button>
             </div>
-            <form method="">
+            <form method="POST" action="<?= site_url('/master/obat') ?>">
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="kodeobat">Kode Obat</label>
-                        <input type="text" class="form-control" id="kodeobat" placeholder="ex: KD01">
+                        <label for="kode">Kode Obat</label>
+                        <input type="text" class="form-control" name="kode" id="kode" placeholder="ex: KD01">
                     </div>
                     <div class="form-group">
-                        <label for="namaobat">Nama Obat</label>
-                        <input type="text" class="form-control" id="namaobat" placeholder="ex: Paramex">
+                        <label for="nama">Nama Obat</label>
+                        <input type="text" class="form-control" name="nama" id="nama" placeholder="ex: Paramex">
                     </div>
                     <div class="form-group">
-                        <label for="hargaobat">Harga Obat</label>
-                        <input type="text" class="form-control" id="hargaobat" placeholder="ex: 100.000">
+                        <label for="harga">Harga Obat</label>
+                        <input type="number" class="form-control" name="harga" id="harga" placeholder="ex: 100.000">
                     </div>
                     <div class="form-group">
-                        <label for="satuanobat">Satuan</label>
-                        <input type="text" class="form-control" id="satuanobat" placeholder="ex: PCS">
+                        <label for="satuan">Satuan</label>
+                        <input type="number" class="form-control" name="satuan" id="satuan" placeholder="ex: PCS">
                     </div>
                     <div class="form-group">
-                        <label for="penggunaanobat">Penggunaan Obat</label>
-                        <input type="text" class="form-control" id="penggunaanobat" placeholder="ex: 1x Sehari">
+                        <label for="penggunaan_obat">Penggunaan Obat</label>
+                        <input type="text" class="form-control" name="penggunaan_obat" id="penggunaan_obat" placeholder="ex: 1x Sehari">
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -237,5 +237,6 @@ $this->section('content');
         </div>
     </div>
 </div>
+<!-- End Modal Tambah Obat-->
 
 <?= $this->endSection(); ?>
