@@ -41,7 +41,7 @@ $this->section('content');
                                             <td><?= $obat["satuan"] ?></td>
                                             <td><?= $obat["penggunaan_obat"] ?></td>
                                             <td>
-                                                <a class="btn btn-icon btn-hover btn-sm btn-rounded" href='<?= base_url('/master/obat/' . $obat['id'] . '/edit' ) ?>'>
+                                                <a class="btn btn-icon btn-hover btn-sm btn-rounded" href='<?= base_url('master/obat/' . $obat['id'] . '/edit' ) ?>'>
                                                     <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                                 </a>
                                                 <button class="btn btn-icon btn-hover btn-sm btn-rounded">

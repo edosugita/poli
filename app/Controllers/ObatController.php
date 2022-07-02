@@ -36,10 +36,28 @@ class ObatController extends BaseController
 
     public function edit($id)
     {
+        $obat = new Obat();
         $data = [
             'title' => 'Edit Data Obat',
+            'dataObat' => $obat->find($id)
         ];
 
-        return view('Admin/MasterPoli/editObat', $data);
+        return view('Admin/MasterPoli/obat/edit', $data);
+    }
+
+    public  function update($id)
+    {
+        $obat = new Obat();
+        $data = [
+            'kode' => $this->request->getVar('kode'),
+            'nama' => $this->request->getVar('nama'),
+            'harga' => $this->request->getVar('harga'),
+            'satuan' => $this->request->getVar('satuan'),
+            'penggunaan_obat' => $this->request->getVar('penggunaan_obat')
+        ];
+
+        $obat->update($id, $data);
+
+        return redirect()->to(site_url('master/obat/'));
     }
 }

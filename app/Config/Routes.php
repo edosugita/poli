@@ -58,10 +58,9 @@ $routes->get('/master-poli/edit-tindakan', 'MasterPoli::EditTindakan');
 $routes->group('/master/obat', function($routes) {
     $routes->get('/', 'ObatController::index');
     $routes->post('/', 'ObatController::new');
-    $routes->get('/(:num)/edit', 'ObatController::edit/$1');
+    $routes->get('(:num)/edit', 'ObatController::edit/$1');
+    $routes->put('(:num)/edit', 'ObatController::update/$1');
 });
-//$routes->get('/master-poli/obat', 'MasterPoli::DataObat');
-//$routes->get('/master-poli/edit-obat', 'MasterPoli::EditObat');
 
 // PASIEN
 $routes->get('/pasien', 'Pasien::index');
