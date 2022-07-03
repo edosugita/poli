@@ -53,32 +53,33 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->get('/keuangan/pengeluaran', 'Keuangan::DataPengeluaran');
     $routes->get('/keuangan/edit-pengeluaran', 'Keuangan::EditPengeluaran');
 
-    // Master | Poli
+    $routes->group('', ['filter' => 'mstfilter'], function ($routes) {
+        // Master | Poli
+        $routes->group('/master/poli', function ($routes) {
+            $routes->match(['get', 'post'], '/', 'PoliController::index');
+            $routes->match(['get', 'post'], '(:num)/edit', 'PoliController::edit/$1');
+        });
 
-    $routes->group('/master/poli', function ($routes) {
-        $routes->match(['get', 'post'], '/', 'PoliController::index');
-        $routes->match(['get', 'post'], '(:num)/edit', 'PoliController::edit/$1');
+        // Master | Tindakan
+        $routes->group('master/tindakan', function ($routes) {
+            $routes->get('/', 'TindakanController::index');
+            $routes->post('/', 'TindakanController::create');
+            $routes->get('(:num)/edit', 'TindakanController::edit/$1');
+            $routes->put('(:num)', 'TindakanController::update/$1');
+        });
+
+        // Master | Obat
+        $routes->group('/master/obat', function ($routes) {
+            $routes->get('/', 'ObatController::index');
+            $routes->post('/', 'ObatController::new');
+            $routes->get('(:num)/edit', 'ObatController::edit/$1');
+            $routes->put('(:num)/edit', 'ObatController::update/$1');
+        });
+
+        // Master | Dokter
+        $routes->get('/master/dokter', 'MasterPoli::DataDokter');
+        $routes->get('/master/edit-dokter', 'MasterPoli::EditDokter');
     });
-
-    // Master | Tindakan
-    $routes->group('master/tindakan', function ($routes) {
-        $routes->get('/', 'TindakanController::index');
-        $routes->post('/', 'TindakanController::create');
-        $routes->get('(:num)/edit', 'TindakanController::edit/$1');
-        $routes->put('(:num)', 'TindakanController::update/$1');
-    });
-
-    // Master | Obat
-    $routes->group('/master/obat', function ($routes) {
-        $routes->get('/', 'ObatController::index');
-        $routes->post('/', 'ObatController::new');
-        $routes->get('(:num)/edit', 'ObatController::edit/$1');
-        $routes->put('(:num)/edit', 'ObatController::update/$1');
-    });
-
-    // Master | Dokter
-    $routes->get('/master/dokter', 'MasterPoli::DataDokter');
-    $routes->get('/master/edit-dokter', 'MasterPoli::EditDokter');
 
     // PASIEN
     $routes->get('/pasien', 'Pasien::index');
