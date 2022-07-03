@@ -3,6 +3,7 @@
 namespace Config;
 
 use App\Filters\AuthFilter;
+use App\Filters\MasterFilter;
 use App\Filters\NoAuthFilter;
 use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Filters\CSRF;
@@ -27,6 +28,7 @@ class Filters extends BaseConfig
         'secureheaders' => SecureHeaders::class,
         'auth' => AuthFilter::class,
         'noauth' => NoAuthFilter::class,
+        'mstfilter' => MasterFilter::class,
     ];
 
     /**
