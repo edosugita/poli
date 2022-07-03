@@ -61,8 +61,12 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
         });
 
         // Master | Tindakan
-        $routes->get('/master/tindakan', 'MasterPoli::DataTindakan');
-        $routes->get('/master/edit-tindakan', 'MasterPoli::EditTindakan');
+        $routes->group('master/tindakan', function ($routes) {
+            $routes->get('/', 'TindakanController::index');
+            $routes->post('/', 'TindakanController::create');
+            $routes->get('(:num)/edit', 'TindakanController::edit/$1');
+            $routes->put('(:num)', 'TindakanController::update/$1');
+        });
 
         // Master | Obat
         $routes->group('/master/obat', function ($routes) {

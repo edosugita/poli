@@ -12,23 +12,29 @@ $this->section('content');
                         <h5>Edit Data Tindakan</h5>
                     </div>
                     <hr>
-                    <form method="">
+                    <form method="POST" action="<?= site_url('master/tindakan/' . $tindakan['id'] )?>">
+                        <input type="hidden" name="_method" value="PUT" />
                         <div class="form-group">
-                            <label for="kodetindakan">Kode Tindakan</label>
-                            <input type="text" class="form-control" id="kodetindakan" placeholder="ex: KD01">
+                            <label for="kode">Kode Poli</label>
+                            <select class="form-control" id="kode_poli" name="kode_poli">
+                                <?php foreach($dataPoli as $poli): ?>
+                                    <option <?= $poli['kode'] == $tindakan['kode_poli'] ? 'selected' : '' ?> value="<?= $poli['kode'] ?>"><?= $poli['nama'] ?></option>
+                                <?php endforeach; ?>
+                            </select>
                         </div>
                         <div class="form-group">
-                            <label for="namatindakan">Nama Tindakan</label>
-                            <input type="text" class="form-control" id="namatindakan" placeholder="ex: Paramex">
+                            <label for="kode">Kode Tindakan</label>
+                            <input type="text" class="form-control" id="kode" name="kode" placeholder="ex: KD01" value="<?= $tindakan['kode'] ?>">
                         </div>
                         <div class="form-group">
-                            <label for="tariftindakan">Tarif</label>
-                            <input type="text" class="form-control" id="tariftindakan" placeholder="ex: 100.000">
+                            <label for="nama">Nama Tindakan</label>
+                            <input type="text" class="form-control" id="nama" name="nama" placeholder="ex: Paramex" value="<?= $tindakan['nama'] ?>">
                         </div>
                         <div class="form-group">
-                            <label for="kodepoli">Kode Poli</label>
-                            <input type="text" class="form-control" id="kodepoli" placeholder="ex: 1x Sehari">
+                            <label for="tarif">Tarif</label>
+                            <input type="text" class="form-control" id="tarif" name="tarif" placeholder="ex: 100.000" value="<?= $tindakan['tarif'] ?>">
                         </div>
+
                         <div class="row">
                             <div class="col-12 d-flex justify-content-end p-h-30">
                                 <div class="row">
