@@ -16,7 +16,8 @@ class CreateTableTindakan extends Migration
             ],
             'kode' => [
                 'type' => 'VARCHAR',
-                'constraint' => '6'
+                'constraint' => '6',
+                'unique' => true
             ],
             'nama' => [
                 'type' => 'VARCHAR',
