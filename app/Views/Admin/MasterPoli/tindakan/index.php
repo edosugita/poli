@@ -32,7 +32,7 @@ $this->section('content');
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($dataTindakan as $tindakan): ?>
+                                    <?php foreach ($dataTindakan as $tindakan) : ?>
                                         <tr>
                                             <td><?= $tindakan['kode'] ?></td>
                                             <td><?= $tindakan['nama'] ?></td>
@@ -70,8 +70,8 @@ $this->section('content');
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="kode_poli">Kode Poli</label>
-                        <select class="form-control" id="kode_poli" name="kode_poli">
-                            <?php foreach($dataPoli as $poli): ?>
+                        <select class="select2" id="kode_poli" name="kode_poli">
+                            <?php foreach ($dataPoli as $poli) : ?>
                                 <option value="<?= $poli['kode'] ?>"><?= $poli['nama'] ?></option>
                             <?php endforeach; ?>
                         </select>

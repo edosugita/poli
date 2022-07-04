@@ -16,7 +16,7 @@ class CreateTableTindakan extends Migration
             ],
             'kode' => [
                 'type' => 'VARCHAR',
-                'constraint' => '6',
+                'constraint' => '255',
                 'unique' => true
             ],
             'nama' => [
@@ -28,7 +28,7 @@ class CreateTableTindakan extends Migration
             ],
             'kode_poli' => [
                 'type' => 'VARCHAR',
-                'constraint' => '3'
+                'constraint' => '255'
             ],
             'created_at' => [
                 'type' => 'DATETIME'
