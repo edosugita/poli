@@ -109,21 +109,21 @@ $this->section('content');
                     </div>
                     <div class="form-group">
                         <label for="kode">Kode Tindakan</label>
-                        <input type="text" style="text-transform:uppercase" class="form-control <?= (isset($validation)) ? ($validation->hasError('kode')) ? 'is-invalid' : NULL : NULL ?>" autofocus value="<?= old('kode'); ?>" id="kode" name="kode" placeholder="ex: KD01">
+                        <input type="text" style="text-transform:uppercase" class="form-control <?= (isset($validation)) ? ($validation->hasError('kode')) ? 'is-invalid' : NULL : NULL ?>" autofocus value="<?= set_value('kode'); ?>" id="kode" name="kode" placeholder="ex: KD01">
                         <div class="invalid-feedback">
                             <?= (isset($validation)) ? ($validation->getError('kode')) : null ?>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="nama">Nama Tindakan</label>
-                        <input type="text" class="form-control <?= (isset($validation)) ? ($validation->hasError('nama')) ? 'is-invalid' : NULL : NULL ?>" autofocus value="<?= old('nama'); ?>" id="nama" name="nama" placeholder="ex: Paramex">
+                        <input type="text" class="form-control <?= (isset($validation)) ? ($validation->hasError('nama')) ? 'is-invalid' : NULL : NULL ?>" autofocus value="<?= set_value('nama'); ?>" id="nama" name="nama" placeholder="ex: Paramex">
                         <div class="invalid-feedback">
                             <?= (isset($validation)) ? ($validation->getError('nama')) : null ?>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="tarif">Tarif</label>
-                        <input type="number" class="form-control <?= (isset($validation)) ? ($validation->hasError('tarif')) ? 'is-invalid' : NULL : NULL ?>" value="<?= old('tarif'); ?>" id="tarif" name="tarif" placeholder="ex: 100.000">
+                        <input type="number" class="form-control <?= (isset($validation)) ? ($validation->hasError('tarif')) ? 'is-invalid' : NULL : NULL ?>" value="<?= set_value('tarif'); ?>" id="tarif" name="tarif" placeholder="ex: 100.000">
                         <div class="invalid-feedback">
                             <?= (isset($validation)) ? ($validation->getError('tarif')) : null ?>
                         </div>
