@@ -33,7 +33,7 @@ $this->section('content');
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach($dataObat as $obat) : ?>
+                                    <?php foreach ($dataObat as $obat) : ?>
                                         <tr>
                                             <td><?= $obat["kode"] ?></td>
                                             <td><?= $obat["nama"] ?></td>
@@ -41,7 +41,7 @@ $this->section('content');
                                             <td><?= $obat["satuan"] ?></td>
                                             <td><?= $obat["penggunaan_obat"] ?></td>
                                             <td>
-                                                <a class="btn btn-icon btn-hover btn-sm btn-rounded" href='<?= base_url('master/obat/' . $obat['id'] . '/edit' ) ?>'>
+                                                <a class="btn btn-icon btn-hover btn-sm btn-rounded" href='<?= base_url('master/obat/' . $obat['id'] . '/edit') ?>'>
                                                     <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                                 </a>
                                                 <button class="btn btn-icon btn-hover btn-sm btn-rounded">
@@ -74,23 +74,38 @@ $this->section('content');
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="kode">Kode Obat</label>
-                        <input type="text" class="form-control" name="kode" id="kode" placeholder="ex: KD01">
+                        <input type="text" class="form-control <?= (isset($validation)) ? ($validation->hasError('kode')) ? 'is-invalid' : null : null ?>" name="kode" id="kode" placeholder="ex: KD01" value="<?= set_value('kode'); ?>">
+                        <div class="invalid-feedback">
+                            <?= (isset($validation)) ? ($validation->getError('kode')) : null ?>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="nama">Nama Obat</label>
-                        <input type="text" class="form-control" name="nama" id="nama" placeholder="ex: Paramex">
+                        <input type="text" class="form-control <?= (isset($validation)) ? ($validation->hasError('nama')) ? 'is-invalid' : null : null ?>" name="nama" id="nama" placeholder="ex: Paramex" value="<?= set_value('nama'); ?>">
+                        <div class="invalid-feedback">
+                            <?= (isset($validation)) ? ($validation->getError('nama')) : null ?>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="harga">Harga Obat</label>
-                        <input type="number" class="form-control" name="harga" id="harga" placeholder="ex: 100.000">
+                        <input type="number" class="form-control <?= (isset($validation)) ? ($validation->hasError('harga')) ? 'is-invalid' : null : null ?>" name="harga" id="harga" placeholder="ex: 100.000" value="<?= set_value('harga'); ?>">
+                        <div class="invalid-feedback">
+                            <?= (isset($validation)) ? ($validation->getError('harga')) : null ?>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="satuan">Satuan</label>
-                        <input type="number" class="form-control" name="satuan" id="satuan" placeholder="ex: PCS">
+                        <input type="number" class="form-control <?= (isset($validation)) ? ($validation->hasError('satuan')) ? 'is-invalid' : null : null ?>" name="satuan" id="satuan" placeholder="ex: PCS" value="<?= set_value('satuan'); ?>">
+                        <div class="invalid-feedback">
+                            <?= (isset($validation)) ? ($validation->getError('satuan')) : null ?>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="penggunaan_obat">Penggunaan Obat</label>
-                        <input type="text" class="form-control" name="penggunaan_obat" id="penggunaan_obat" placeholder="ex: 1x Sehari">
+                        <input type="text" class="form-control <?= (isset($validation)) ? ($validation->hasError('penggunaan_obat')) ? 'is-invalid' : null : null ?>" name="penggunaan_obat" id="penggunaan_obat" placeholder="ex: 1x Sehari" value="<?= set_value('penggunaan_obat'); ?>">
+                        <div class="invalid-feedback">
+                            <?= (isset($validation)) ? ($validation->getError('penggunaan_obat')) : null ?>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">

@@ -68,10 +68,8 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
 
         // Master | Obat
         $routes->group('/master/obat', function ($routes) {
-            $routes->get('/', 'ObatController::index');
-            $routes->post('/', 'ObatController::new');
-            $routes->get('(:num)/edit', 'ObatController::edit/$1');
-            $routes->put('(:num)/edit', 'ObatController::update/$1');
+            $routes->match(['get', 'post'], '/', 'ObatController::index');
+            $routes->match(['get', 'post'], '(:num)/edit', 'ObatController::edit/$1');
         });
 
         // Master | Dokter
