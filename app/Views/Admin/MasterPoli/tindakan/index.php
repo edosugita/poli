@@ -12,6 +12,36 @@ $this->section('content');
                         <h5>Data Nama Tindakan</h5>
                     </div>
                     <hr>
+                    <?php if (!empty(session()->getFlashdata('success'))) : ?>
+                        <div class="col-12">
+                            <div class="alert alert-success alert-dismissible fade show">
+                                <?= session()->getFlashdata('success'); ?>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+                    <?php if (!empty(session()->getFlashdata('fail'))) : ?>
+                        <div class="col-12">
+                            <div class="alert alert-danger alert-dismissible fade show">
+                                <?= session()->getFlashdata('fail'); ?>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+                    <?php if (isset($validation)) : ?>
+                        <div class="col-12">
+                            <div class="alert alert-danger alert-dismissible fade show">
+                                <b>Gagal&nbsp;</b>menambah data, mohon mengisi form dengan benar!
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                    <?php endif; ?>
                     <div class="row m-b-30">
                         <div class="col-12 d-flex justify-content-end p-h-30">
                             <div class="row">
@@ -36,7 +66,7 @@ $this->section('content');
                                         <tr>
                                             <td><?= $tindakan['kode'] ?></td>
                                             <td><?= $tindakan['nama'] ?></td>
-                                            <td><?= $tindakan['tarif'] ?></td>
+                                            <td>Rp. <?= number_format($tindakan['tarif'], 2, ',', '.') ?></td>
                                             <td><?= $tindakan['kode_poli'] ?></td>
                                             <td>
                                                 <a class="btn btn-icon btn-hover btn-sm btn-rounded" href='<?= site_url('master/tindakan/' .  $tindakan['id'] . '/edit') ?>'>
@@ -66,7 +96,8 @@ $this->section('content');
                     <i class="anticon anticon-close"></i>
                 </button>
             </div>
-            <form method="POST" action="<?= site_url('master/tindakan') ?>">
+            <form method="POST" action="<?= base_url('/master/tindakan/') ?>">
+                <?= csrf_field() ?>
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="kode_poli">Kode Poli</label>
@@ -78,15 +109,24 @@ $this->section('content');
                     </div>
                     <div class="form-group">
                         <label for="kode">Kode Tindakan</label>
-                        <input type="text" class="form-control" id="kode" name="kode" placeholder="ex: KD01">
+                        <input type="text" style="text-transform:uppercase" class="form-control <?= (isset($validation)) ? ($validation->hasError('kode')) ? 'is-invalid' : NULL : NULL ?>" autofocus value="<?= old('kode'); ?>" id="kode" name="kode" placeholder="ex: KD01">
+                        <div class="invalid-feedback">
+                            <?= (isset($validation)) ? ($validation->getError('kode')) : null ?>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="nama">Nama Tindakan</label>
-                        <input type="text" class="form-control" id="nama" name="nama" placeholder="ex: Paramex">
+                        <input type="text" class="form-control <?= (isset($validation)) ? ($validation->hasError('nama')) ? 'is-invalid' : NULL : NULL ?>" autofocus value="<?= old('nama'); ?>" id="nama" name="nama" placeholder="ex: Paramex">
+                        <div class="invalid-feedback">
+                            <?= (isset($validation)) ? ($validation->getError('nama')) : null ?>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="tarif">Tarif</label>
-                        <input type="number" class="form-control" id="tarif" name="tarif" placeholder="ex: 100.000">
+                        <input type="number" class="form-control <?= (isset($validation)) ? ($validation->hasError('tarif')) ? 'is-invalid' : NULL : NULL ?>" value="<?= old('tarif'); ?>" id="tarif" name="tarif" placeholder="ex: 100.000">
+                        <div class="invalid-feedback">
+                            <?= (isset($validation)) ? ($validation->getError('tarif')) : null ?>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">

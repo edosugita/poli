@@ -61,11 +61,9 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
         });
 
         // Master | Tindakan
-        $routes->group('master/tindakan', function ($routes) {
-            $routes->get('/', 'TindakanController::index');
-            $routes->post('/', 'TindakanController::create');
-            $routes->get('(:num)/edit', 'TindakanController::edit/$1');
-            $routes->put('(:num)', 'TindakanController::update/$1');
+        $routes->group('/master/tindakan', function ($routes) {
+            $routes->match(['get', 'post'], '/', 'TindakanController::index');
+            $routes->match(['get', 'post'], '(:num)/edit', 'TindakanController::edit/$1');
         });
 
         // Master | Obat
