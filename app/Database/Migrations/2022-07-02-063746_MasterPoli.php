@@ -12,13 +12,13 @@ class MasterPoli extends Migration
             [
                 'id' => [
                     'type' => 'INT',
-                    'constraint' => 11,
                     'unsigned' => TRUE,
                     'auto_increment' => TRUE
                 ],
                 'kode' => [
                     'type' => 'VARCHAR',
                     'constraint' => '255',
+                    'unique' => TRUE
                 ],
                 'nama' => [
                     'type' => 'VARCHAR',
@@ -26,7 +26,6 @@ class MasterPoli extends Migration
                 ],
                 'tarif' => [
                     'type' => 'INT',
-                    'constraint' => '11',
                 ],
                 'status' => [
                     'type' => 'BOOLEAN',

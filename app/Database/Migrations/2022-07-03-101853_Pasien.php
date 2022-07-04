@@ -38,11 +38,11 @@ class Pasien extends Migration
                 ],
                 'jenis_kelamin' => [
                     'type' => 'CHAR',
-                    'constraint' => '256',
+                    'constraint' => '255',
                 ],
                 'tempat_lahir' => [
                     'type' => 'CHAR',
-                    'constraint' => '256',
+                    'constraint' => '255',
                 ],
                 'tanggal_lahir' => [
                     'type' => 'DATE',
@@ -55,26 +55,26 @@ class Pasien extends Migration
                 ],
                 'jenis_pasien' => [
                     'type' => 'CHAR',
-                    'constraint' => '256',
+                    'constraint' => '255',
                 ],
                 'nama_wali' => [
                     'type' => 'CHAR',
-                    'constraint' => '256',
+                    'constraint' => '255',
                 ],
                 'nomor_wali' => [
                     'type' => 'INT',
                 ],
                 'status_verifikasi' => [
                     'type' => 'CHAR',
-                    'constraint' => '256',
+                    'constraint' => '255',
                 ],
                 'berkas_tambahan' => [
                     'type' => 'CHAR',
-                    'constraint' => '256',
+                    'constraint' => '255',
                 ],
                 'nomor_asuransi' => [
                     'type' => 'CHAR',
-                    'constraint' => '256',
+                    'constraint' => '255',
                 ],
             ]
         );
