@@ -11,6 +11,7 @@ class TindakanController extends BaseController
     private TindakanModel $tindakanModel;
     public function  __construct()
     {
+        helper(['url', 'form']);
         $this->tindakanModel = new TindakanModel();
     }
 

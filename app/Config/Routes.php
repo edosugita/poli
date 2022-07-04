@@ -76,7 +76,7 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
 
         // Master | Dokter
         $routes->get('/master/dokter', 'MasterPoli::DataDokter');
-        $routes->get('/master/edit-dokter', 'MasterPoli::EditDokter');
+        $routes->get('/master/dokter/edit', 'MasterPoli::EditDokter');
     });
 
     // PASIEN

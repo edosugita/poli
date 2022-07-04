@@ -28,7 +28,7 @@ class MasterPoli extends BaseController
             'title' => 'Data Dokter',
         ];
 
-        return view('Admin/MasterPoli/dokter', $data);
+        return view('Admin/MasterPoli/dokter/index', $data);
     }
 
     public function EditDokter()
@@ -37,6 +37,6 @@ class MasterPoli extends BaseController
             'title' => 'Edit Data Dokter',
         ];
 
-        return view('Admin/MasterPoli/editDokter', $data);
+        return view('Admin/MasterPoli/dokter/edit', $data);
     }
 }
