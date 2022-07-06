@@ -49,7 +49,7 @@ class Auth extends BaseController
                 $check_password = Hash::check($password, $poli_info['password']);
 
                 if (!$check_password) {
-                    session()->setFlashdata('fail', 'Kata snadi salah');
+                    session()->setFlashdata('fail', 'Kata sandi salah');
                     return redirect()->to('/login')->withInput();
                 } else {
                     $poli_id = $poli_info['id'];
