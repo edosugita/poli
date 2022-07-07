@@ -33,7 +33,9 @@ $this->section('content');
                             <i class="anticon anticon-team"></i>
                         </div>
                         <div class="m-l-15">
-                            <h2 class="m-b-0">$23,523</h2>
+                            <?php foreach ($countPasien as $data) : ?>
+                                <h2 class="m-b-0"><?= $data['no_rm'] ?></h2>
+                            <?php endforeach; ?>
                             <p class="m-b-0 text-muted">Pasien</p>
                         </div>
                     </div>
@@ -63,7 +65,9 @@ $this->section('content');
                             <i class="anticon anticon-audit"></i>
                         </div>
                         <div class="m-l-15">
-                            <h2 class="m-b-0">3,685</h2>
+                            <?php foreach ($countPoli as $data) : ?>
+                                <h2 class="m-b-0"><?= $data['id'] ?></h2>
+                            <?php endforeach; ?>
                             <p class="m-b-0 text-muted">Poli</p>
                         </div>
                     </div>

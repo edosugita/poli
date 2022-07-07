@@ -55,21 +55,28 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
 
     $routes->group('', ['filter' => 'mstfilter'], function ($routes) {
         // Master | Poli
-        $routes->group('/master/poli', function ($routes) {
-            $routes->match(['get', 'post'], '/', 'PoliController::index');
+        $routes->group('/master/poli', static function ($routes) {
+            $routes->get('/', 'PoliController::index');
             $routes->match(['get', 'post'], '(:num)/edit', 'PoliController::edit/$1');
+            $routes->match(['get', 'post'], 'add', 'PoliController::add');
         });
+
+        // $routes->get('/master/poli', 'PoliController::index');
+        // $routes->match(['get', 'post'], 'master/poli/(:num)/edit', 'PoliController::edit/$1');
+        // $routes->match(['get', 'post'], 'master/poli/add', 'PoliController::add');
 
         // Master | Tindakan
         $routes->group('/master/tindakan', function ($routes) {
-            $routes->match(['get', 'post'], '/', 'TindakanController::index');
+            $routes->get('/', 'TindakanController::index');
             $routes->match(['get', 'post'], '(:num)/edit', 'TindakanController::edit/$1');
+            $routes->match(['get', 'post'], 'add', 'TindakanController::add');
         });
 
         // Master | Obat
         $routes->group('/master/obat', function ($routes) {
-            $routes->match(['get', 'post'], '/', 'ObatController::index');
+            $routes->get('/', 'ObatController::index');
             $routes->match(['get', 'post'], '(:num)/edit', 'ObatController::edit/$1');
+            $routes->match(['get', 'post'], 'add', 'ObatController::add');
         });
 
         // Master | Dokter

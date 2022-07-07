@@ -22,10 +22,11 @@ class Auth extends BaseController
         if ($this->request->getMethod() == 'post') {
             $validation = $this->validate([
                 'nama' => [
-                    'rules' => 'required|is_not_unique[poli.nama]',
+                    'rules' => 'required|is_not_unique[poli.username]',
                     'errors' => [
-                        'required' => 'Nama poli harus di isi',
-                        'is_not_unique' => 'Nama poli tidak terdaftar'
+                        'required' => 'Username harus di isi',
+                        'is_not_unique' => 'Username tidak terdaftar',
+                        'strtolower' => 'Username atau Password salah'
                     ]
                 ],
 
@@ -45,18 +46,23 @@ class Auth extends BaseController
                 $nama = $this->request->getVar('nama');
                 $password = $this->request->getVar('password');
 
-                $poli_info = $this->poli->where('nama', $nama)->first();
-                $check_password = Hash::check($password, $poli_info['password']);
-
-                if (!$check_password) {
-                    session()->setFlashdata('fail', 'Kata snadi salah');
-                    return redirect()->to('/login')->withInput();
+                if (!ctype_lower($nama)) {
+                    session()->setFlashdata('fail', 'Username atau Kata sandi salah');
+                    return redirect()->back()->withInput();
                 } else {
-                    $poli_id = $poli_info['id'];
-                    session()->set('loggedUser', $poli_id);
+                    $poli_info = $this->poli->where('username', $nama)->first();
+                    $check_password = Hash::check($password, $poli_info['password']);
 
-                    $poli = $this->poli->where('nama', $nama)->first();
-                    return $this->data($poli);
+                    if (!$check_password) {
+                        session()->setFlashdata('fail', 'Username atau Kata sandi salah');
+                        return redirect()->to('/login')->withInput();
+                    } else {
+                        $poli_id = $poli_info['id'];
+                        session()->set('loggedUser', $poli_id);
+
+                        $poli = $this->poli->where('username', $nama)->first();
+                        return $this->data($poli);
+                    }
                 }
             }
         }
@@ -69,6 +75,7 @@ class Auth extends BaseController
         $data = [
             'id' => $poli['id'],
             'nama' => $poli['nama'],
+            'username' => $poli['username'],
             'tarif' => $poli['tarif'],
             'status' => $poli['status'],
         ];

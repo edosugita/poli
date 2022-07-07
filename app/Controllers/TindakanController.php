@@ -24,6 +24,16 @@ class TindakanController extends BaseController
             'dataTindakan' => $this->tindakanModel->findAll()
         ];
 
+        return view('Admin/MasterPoli/tindakan/index', $data);
+    }
+
+    public function add()
+    {
+        $poliModel = new PoliModel();
+        $data = [
+            'title' => 'Data Tindakan',
+            'dataPoli' => $poliModel->where('kode !=', 'MSP')->find(), // select all poli except master
+        ];
 
         if ($this->request->getMethod() == 'post') {
             $validation = $this->validate([
@@ -73,7 +83,7 @@ class TindakanController extends BaseController
             }
         }
 
-        return view('Admin/MasterPoli/tindakan/index', $data);
+        return view('Admin/MasterPoli/tindakan/add', $data);
     }
 
     public function edit($id)

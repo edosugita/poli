@@ -24,6 +24,10 @@ class MasterPoli extends Migration
                     'type' => 'VARCHAR',
                     'constraint' => '255',
                 ],
+                'username' => [
+                    'type' => 'VARCHAR',
+                    'constraint' => '255',
+                ],
                 'tarif' => [
                     'type' => 'INT',
                 ],
