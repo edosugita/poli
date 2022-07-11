@@ -54,16 +54,16 @@ $this->section('content');
                             </div>
                         </div>
                     <?php endif; ?>
-                    <form action="<?= base_url('/login') ?>" method="post">
-                        <div class="form-group">
-                            <label class="font-weight-semibold">Username:</label>
-                            <div class="input-affix">
-                                <i class="prefix-icon anticon anticon-user"></i>
-                                <input type="text" class="form-control <?= (isset($validation)) ? ($validation->hasError('nama')) ? 'is-invalid' : null : null ?>" placeholder="ex: Poli Anak" name="nama" value="<?= set_value('nama') ?>">
-                            </div>
-                            <div class="invalid-feedback">
-                                <?= (isset($validation)) ? ($validation->getError('nama')) : null ?>
-                            </div>
+                    <div class="form-group">
+                        <label class="font-weight-semibold">Username:</label>
+                        <div class="input-affix">
+                            <i class="prefix-icon anticon anticon-user"></i>
+                            <input type="text" class="form-control <?= (isset($validation)) ? ($validation->hasError('nama')) ? 'is-invalid' : null : null ?>" placeholder="ex: Poli Anak" name="nama" value="<?= set_value('nama') ?>">
+                        </div>
+                        <div class="invalid-feedback">
+                            <?= (isset($validation)) ? ($validation->getError('nama')) : null ?>
+                        </div>
+                    </div>
                     <div class="form-group">
                         <label class="font-weight-semibold">Password:</label>
                         <div class="input-affix m-b-10">
@@ -74,10 +74,10 @@ $this->section('content');
                             <?= (isset($validation)) ? ($validation->getError('password')) : null ?>
                         </div>
                     </div>
-                    <div class="form-group">
+                     <div class="form-group">
                         <div class="d-flex align-items-center justify-content-start">
                             <span class="font-size-13 text-muted">
-                                <button class="btn btn-primary">Sign In</button>
+                                <button class="btn btn-primary">Login</button>
                             </span>
                         </div>
                     </div>
