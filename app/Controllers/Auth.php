@@ -75,7 +75,7 @@ class Auth extends BaseController
                 }
             }
         }
-
+        }
         return view('Auth/login', $data);
     }
 
