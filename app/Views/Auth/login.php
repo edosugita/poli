@@ -64,18 +64,6 @@ $this->section('content');
                             <div class="invalid-feedback">
                                 <?= (isset($validation)) ? ($validation->getError('nama')) : null ?>
                             </div>
-
-                    <!-- Inputan  -->
-                    <div class="form-group">
-                        <label class="font-weight-semibold">Nama Poli:</label>
-                        <div class="input-affix">
-                            <i class="prefix-icon anticon anticon-user"></i>
-                            <input type="text" class="form-control <?= (isset($validation)) ? ($validation->hasError('nama')) ? 'is-invalid' : null : null ?>" placeholder="ex: Poli Anak" name="nama" value="<?= set_value('nama') ?>">
-                        </div>
-                        <div class="invalid-feedback">
-                            <?= (isset($validation)) ? ($validation->getError('nama')) : null ?>
-                        </div>
-                    </div>
                     <div class="form-group">
                         <label class="font-weight-semibold">Password:</label>
                         <div class="input-affix m-b-10">
