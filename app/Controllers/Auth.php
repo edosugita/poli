@@ -46,9 +46,18 @@ class Auth extends BaseController
                 $nama = $this->request->getVar('nama');
                 $password = $this->request->getVar('password');
 
+
                 if (!ctype_lower($nama)) {
                     session()->setFlashdata('fail', 'Username atau Kata sandi salah!');
                     return redirect()->back()->withInput();
+
+                $poli_info = $this->poli->where('nama', $nama)->first();
+                $check_password = Hash::check($password, $poli_info['password']);
+
+                if (!$check_password) {
+                    session()->setFlashdata('fail', 'Kata sandi salah');
+                    return redirect()->to('/login')->withInput();
+
                 } else {
                     $poli_info = $this->poli->where('username', $nama)->first();
                     $check_password = Hash::check($password, $poli_info['password']);
