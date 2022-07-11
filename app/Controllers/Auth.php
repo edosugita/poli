@@ -46,31 +46,32 @@ class Auth extends BaseController
                 $nama = $this->request->getVar('nama');
                 $password = $this->request->getVar('password');
 
-
                 if (!ctype_lower($nama)) {
-                    session()->setFlashdata('fail', 'Username atau Kata sandi salah');
+                    session()->setFlashdata('fail', 'Username atau Kata sandi salah!');
                     return redirect()->back()->withInput();
-
-                $poli_info = $this->poli->where('nama', $nama)->first();
-                $check_password = Hash::check($password, $poli_info['password']);
-
-                if (!$check_password) {
-                    session()->setFlashdata('fail', 'Kata sandi salah');
-                    return redirect()->to('/login')->withInput();
 
                 } else {
                     $poli_info = $this->poli->where('username', $nama)->first();
                     $check_password = Hash::check($password, $poli_info['password']);
 
                     if (!$check_password) {
-                        session()->setFlashdata('fail', 'Username atau Kata sandi salah');
+                        session()->setFlashdata('fail', 'Kata sandi salah');
                         return redirect()->to('/login')->withInput();
-                    } else {
-                        $poli_id = $poli_info['id'];
-                        session()->set('loggedUser', $poli_id);
 
-                        $poli = $this->poli->where('username', $nama)->first();
-                        return $this->data($poli);
+                    } else {
+                        $poli_info = $this->poli->where('username', $nama)->first();
+                        $check_password = Hash::check($password, $poli_info['password']);
+
+                        if (!$check_password) {
+                            session()->setFlashdata('fail', 'Username atau Kata sandi salah!');
+                            return redirect()->to('/login')->withInput();
+                        } else {
+                            $poli_id = $poli_info['id'];
+                            session()->set('loggedUser', $poli_id);
+
+                            $poli = $this->poli->where('username', $nama)->first();
+                            return $this->data($poli);
+                        }
                     }
                 }
             }
@@ -90,7 +91,7 @@ class Auth extends BaseController
         ];
 
         session()->set($data);
-        return redirect()->to('/')->with('success', 'Berhasil login');;
+        return redirect()->to('/')->with('success', 'Berhasil login');
     }
 
     public function logout()
