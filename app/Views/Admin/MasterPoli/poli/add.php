@@ -9,7 +9,7 @@ $this->section('content');
             <div class="card">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h5>Edit Data Poli</h5>
+                        <h5>Tambah Data Poli</h5>
                     </div>
                     <hr>
                     <?php if (!empty(session()->getFlashdata('success'))) : ?>
@@ -32,42 +32,54 @@ $this->section('content');
                             </div>
                         </div>
                     <?php endif; ?>
-                    <form action="<?= base_url('/master/poli/' . $dataPoli['id']) . '/edit' ?>" method="post">
+                    <?php if (isset($validation)) : ?>
+                        <div class="col-12">
+                            <div class="alert alert-danger alert-dismissible fade show">
+                                <b>Gagal&nbsp;</b>menambah data, mohon mengisi form dengan benar!
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+
+                    <form action="<?= base_url('/master/poli/add') ?>" method="post">
+                        <?= csrf_field() ?>
                         <div class="form-group">
                             <label>Kode Poli</label>
-                            <input type="text" class="form-control <?= (isset($validation)) ? ($validation->hasError('kode')) ? 'is-invalid' : null : null ?>" name="kode" placeholder="ex: KD01" value="<?= $dataPoli['kode']; ?>">
+                            <input type="text" class="form-control <?= (isset($validation)) ? ($validation->hasError('kode')) ? 'is-invalid' : null : null ?>" name="kode" placeholder="ex: KD01" value="<?= set_value('kode'); ?>">
                             <div class="invalid-feedback">
                                 <?= (isset($validation)) ? ($validation->getError('kode')) : null ?>
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Nama Poli</label>
-                            <input type="text" class="form-control <?= (isset($validation)) ? ($validation->hasError('nama')) ? 'is-invalid' : null : null ?>" name="nama" placeholder="ex: Poli Anak" value="<?= $dataPoli['nama']; ?>" id="data" oninput="tampil()">
+                            <input type="text" class="form-control <?= (isset($validation)) ? ($validation->hasError('nama')) ? 'is-invalid' : null : null ?>" name="nama" placeholder="ex: Poli Anak" value="<?= set_value('nama'); ?>" id="data" oninput="tampil()">
                             <div class="invalid-feedback">
                                 <?= (isset($validation)) ? ($validation->getError('nama')) : null ?>
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Username</label>
-                            <input type="text" class="form-control" name="username" value="<?= $dataPoli['username']; ?>" id="hasil" readonly>
+                            <input type="text" class="form-control" name="username" value="<?= set_value('username'); ?>" id="hasil" readonly>
                         </div>
                         <div class="form-group">
                             <label>Tarif Poli</label>
-                            <input type="text" class="form-control <?= (isset($validation)) ? ($validation->hasError('tarif')) ? 'is-invalid' : null : null ?>" name="tarif" placeholder="ex: 100.000" value="<?= $dataPoli['tarif']; ?>">
+                            <input type="text" class="form-control <?= (isset($validation)) ? ($validation->hasError('tarif')) ? 'is-invalid' : null : null ?>" name="tarif" placeholder="ex: 100.000" value="<?= set_value('tarif'); ?>">
                             <div class="invalid-feedback">
                                 <?= (isset($validation)) ? ($validation->getError('tarif')) : null ?>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>New Password</label>
-                            <input type="password" class="form-control <?= (isset($validation)) ? ($validation->hasError('password')) ? 'is-invalid' : null : null ?>" name="password" minlength="3" maxlength="12" placeholder="Password" value="<?= set_value('password') ?>">
+                            <label>Password</label>
+                            <input type="password" class="form-control <?= (isset($validation)) ? ($validation->hasError('password')) ? 'is-invalid' : null : null ?>" name="password" placeholder="Password" value="<?= set_value('password'); ?>">
                             <div class="invalid-feedback">
                                 <?= (isset($validation)) ? ($validation->getError('password')) : null ?>
                             </div>
                         </div>
                         <div class="form-group m-b-50">
                             <label>Confirm Password</label>
-                            <input type="password" class="form-control <?= (isset($validation)) ? ($validation->hasError('cpassword')) ? 'is-invalid' : null : null ?>" name="cpassword" minlength="3" maxlength="12" placeholder="Confirm Password" <?= set_value('cpassword') ?>>
+                            <input type="password" class="form-control <?= (isset($validation)) ? ($validation->hasError('cpassword')) ? 'is-invalid' : null : null ?>" name="cpassword" placeholder="Confirm Password" value="<?= set_value('cpassword'); ?>">
                             <div class="invalid-feedback">
                                 <?= (isset($validation)) ? ($validation->getError('cpassword')) : null ?>
                             </div>

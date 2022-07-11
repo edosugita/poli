@@ -39,10 +39,6 @@
 
             </div>
             <!-- Page Container END -->
-
-            <!-- Search Start-->
-            <?= $this->include('Layouts/Admin/search'); ?>
-            <!-- Search End-->
         </div>
     </div>
 
@@ -66,6 +62,8 @@
         $('.select2').select2();
         $('.datepicker-input').datepicker();
     </script>
+
+    <?= $this->renderSection('js'); ?>
 
 </body>
 

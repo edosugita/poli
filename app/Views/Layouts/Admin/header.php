@@ -24,11 +24,6 @@
                     <i class="anticon"></i>
                 </a>
             </li>
-            <li>
-                <a href="javascript:void(0);" data-toggle="modal" data-target="#search-drawer">
-                    <i class="anticon anticon-search"></i>
-                </a>
-            </li>
         </ul>
         <ul class="nav-right">
             <li class="dropdown dropdown-animated scale-left">
@@ -109,7 +104,7 @@
                             </div>
                             <div class="m-l-10">
                                 <p class="m-b-0 text-dark font-weight-semibold"><?= session()->get('nama') ?></p>
-                                <p class="m-b-0 opacity-07">Admin</p>
+                                <p class="m-b-0 opacity-07"><?= session()->get('username') ?></p>
                             </div>
                         </div>
                     </div>

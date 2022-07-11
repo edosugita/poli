@@ -54,6 +54,17 @@ $this->section('content');
                             </div>
                         </div>
                     <?php endif; ?>
+                    <form action="<?= base_url('/login') ?>" method="post">
+                        <div class="form-group">
+                            <label class="font-weight-semibold">Username:</label>
+                            <div class="input-affix">
+                                <i class="prefix-icon anticon anticon-user"></i>
+                                <input type="text" class="form-control <?= (isset($validation)) ? ($validation->hasError('nama')) ? 'is-invalid' : null : null ?>" placeholder="ex: Poli Anak" name="nama" value="<?= set_value('nama') ?>">
+                            </div>
+                            <div class="invalid-feedback">
+                                <?= (isset($validation)) ? ($validation->getError('nama')) : null ?>
+                            </div>
+
                     <!-- Inputan  -->
                     <div class="form-group">
                         <label class="font-weight-semibold">Nama Poli:</label>

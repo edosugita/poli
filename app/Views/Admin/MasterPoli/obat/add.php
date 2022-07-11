@@ -9,7 +9,7 @@ $this->section('content');
             <div class="card">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h5>Edit Data Poli</h5>
+                        <h5>Edit Data Obat</h5>
                     </div>
                     <hr>
                     <?php if (!empty(session()->getFlashdata('success'))) : ?>
@@ -32,44 +32,51 @@ $this->section('content');
                             </div>
                         </div>
                     <?php endif; ?>
-                    <form action="<?= base_url('/master/poli/' . $dataPoli['id']) . '/edit' ?>" method="post">
+                    <?php if (isset($validation)) : ?>
+                        <div class="col-12">
+                            <div class="alert alert-danger alert-dismissible fade show">
+                                <b>Gagal&nbsp;</b>menambah data, mohon mengisi form dengan benar!
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+
+                    <form action="<?= site_url('/master/obat/add') ?>" method="post">
                         <div class="form-group">
-                            <label>Kode Poli</label>
-                            <input type="text" class="form-control <?= (isset($validation)) ? ($validation->hasError('kode')) ? 'is-invalid' : null : null ?>" name="kode" placeholder="ex: KD01" value="<?= $dataPoli['kode']; ?>">
+                            <label for="kode">Kode Obat</label>
+                            <input type="text" class="form-control <?= (isset($validation)) ? ($validation->hasError('kode')) ? 'is-invalid' : null : null ?>" name="kode" id="kode" placeholder="ex: KD01" value="<?= set_value('kode'); ?>">
                             <div class="invalid-feedback">
                                 <?= (isset($validation)) ? ($validation->getError('kode')) : null ?>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Nama Poli</label>
-                            <input type="text" class="form-control <?= (isset($validation)) ? ($validation->hasError('nama')) ? 'is-invalid' : null : null ?>" name="nama" placeholder="ex: Poli Anak" value="<?= $dataPoli['nama']; ?>" id="data" oninput="tampil()">
+                            <label for="nama">Nama Obat</label>
+                            <input type="text" class="form-control <?= (isset($validation)) ? ($validation->hasError('nama')) ? 'is-invalid' : null : null ?>" name="nama" id="nama" placeholder="ex: Paramex" value="<?= set_value('nama'); ?>">
                             <div class="invalid-feedback">
                                 <?= (isset($validation)) ? ($validation->getError('nama')) : null ?>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Username</label>
-                            <input type="text" class="form-control" name="username" value="<?= $dataPoli['username']; ?>" id="hasil" readonly>
-                        </div>
-                        <div class="form-group">
-                            <label>Tarif Poli</label>
-                            <input type="text" class="form-control <?= (isset($validation)) ? ($validation->hasError('tarif')) ? 'is-invalid' : null : null ?>" name="tarif" placeholder="ex: 100.000" value="<?= $dataPoli['tarif']; ?>">
+                            <label for="harga">Harga Obat</label>
+                            <input type="number" class="form-control <?= (isset($validation)) ? ($validation->hasError('harga')) ? 'is-invalid' : null : null ?>" name="harga" id="harga" placeholder="ex: 100000" value="<?= set_value('harga'); ?>">
                             <div class="invalid-feedback">
-                                <?= (isset($validation)) ? ($validation->getError('tarif')) : null ?>
+                                <?= (isset($validation)) ? ($validation->getError('harga')) : null ?>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>New Password</label>
-                            <input type="password" class="form-control <?= (isset($validation)) ? ($validation->hasError('password')) ? 'is-invalid' : null : null ?>" name="password" minlength="3" maxlength="12" placeholder="Password" value="<?= set_value('password') ?>">
-                            <div class="invalid-feedback">
-                                <?= (isset($validation)) ? ($validation->getError('password')) : null ?>
-                            </div>
+                            <label>Satuan</label>
+                            <select class="select2" name="satuan">
+                                <option value="pcs">PCS</option>
+                                <option value="btl">BTL</option>
+                            </select>
                         </div>
-                        <div class="form-group m-b-50">
-                            <label>Confirm Password</label>
-                            <input type="password" class="form-control <?= (isset($validation)) ? ($validation->hasError('cpassword')) ? 'is-invalid' : null : null ?>" name="cpassword" minlength="3" maxlength="12" placeholder="Confirm Password" <?= set_value('cpassword') ?>>
+                        <div class="form-group">
+                            <label for="penggunaan_obat">Penggunaan Obat</label>
+                            <input type="text" class="form-control <?= (isset($validation)) ? ($validation->hasError('penggunaan_obat')) ? 'is-invalid' : null : null ?>" name="penggunaan_obat" id="penggunaan_obat" placeholder="ex: 1x Sehari" value="<?= set_value('penggunaan_obat'); ?>">
                             <div class="invalid-feedback">
-                                <?= (isset($validation)) ? ($validation->getError('cpassword')) : null ?>
+                                <?= (isset($validation)) ? ($validation->getError('penggunaan_obat')) : null ?>
                             </div>
                         </div>
                         <div class="row">
@@ -87,8 +94,4 @@ $this->section('content');
     </div>
 </div>
 
-<?= $this->endSection(); ?>
-
-<?= $this->section('js'); ?>
-<script src="<?= base_url('assets/js/script.js') ?>"></script>
 <?= $this->endSection(); ?>

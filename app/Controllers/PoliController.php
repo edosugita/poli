@@ -20,6 +20,15 @@ class PoliController extends BaseController
             'dataPoli' => $this->poli->findAll(),
         ];
 
+        return view('Admin/MasterPoli/poli/index', $data);
+    }
+
+    public function add()
+    {
+        $data = [
+            'title' => 'Tambah Data Poli'
+        ];
+
         if ($this->request->getMethod() == 'post') {
             $validation = $this->validate([
                 'kode' => [
@@ -32,9 +41,16 @@ class PoliController extends BaseController
                     ]
                 ],
                 'nama' => [
+                    'rules' => 'required|is_unique[poli.nama]',
+                    'errors' => [
+                        'required' => 'Nama poli harus di isi',
+                        'is_unique' => 'Nama poli telah terdaftar',
+                    ]
+                ],
+                'username' => [
                     'rules' => 'required',
                     'errors' => [
-                        'required' => 'Nama poli harus di isi'
+                        'required' => 'username harus di isi',
                     ]
                 ],
                 'tarif' => [
@@ -69,9 +85,12 @@ class PoliController extends BaseController
                 $newData = [
                     'kode' => $this->request->getVar('kode'),
                     'nama' => $this->request->getVar('nama'),
+                    'username' => $this->request->getVar('username'),
                     'tarif' => $this->request->getVar('tarif'),
                     'password' => Hash::make($this->request->getVar('password')),
                 ];
+
+                // dd($newData);
 
                 $query = $this->poli->insert($newData);
 
@@ -83,7 +102,7 @@ class PoliController extends BaseController
             }
         }
 
-        return view('Admin/MasterPoli/poli/index', $data);
+        return view('Admin/MasterPoli/poli/add', $data);
     }
 
     public function edit($id)

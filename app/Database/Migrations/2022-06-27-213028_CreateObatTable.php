@@ -26,7 +26,8 @@ class CreateObatTable extends Migration
                 'type' => 'INT',
             ],
             'satuan' => [
-                'type' => 'INT',
+                'type' => 'VARCHAR',
+                'constraint' => 10,
             ],
             'penggunaan_obat' => [
                 'type' => 'TEXT',

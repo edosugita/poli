@@ -20,6 +20,16 @@ class ObatController extends BaseController
             'title' => 'Data Obat',
             'dataObat' => $obat->findAll()
         ];
+
+        return view('Admin/MasterPoli/obat/index', $data);
+    }
+
+    public function add()
+    {
+        $data = [
+            'title' => 'Tambah Data Obat',
+        ];
+
         if ($this->request->getMethod() == 'post') {
             $validation = $this->validate([
                 'kode' => [
@@ -40,13 +50,6 @@ class ObatController extends BaseController
                     'errors' => [
                         'required' => 'Harga obat harus di isi',
                         'integer' => 'Harga obat harus berupa angka'
-                    ]
-                ],
-                'satuan' => [
-                    'rules' => 'required|integer',
-                    'errors' => [
-                        'required' => 'Satuan obat harus di isi',
-                        'integer' => 'Satuan obat harus berupa angka'
                     ]
                 ],
                 'penggunaan_obat' => [
@@ -78,7 +81,7 @@ class ObatController extends BaseController
             }
         }
 
-        return view('Admin/MasterPoli/obat/index', $data);
+        return view('Admin/MasterPoli/obat/add', $data);
     }
 
     public function edit($id)
@@ -91,10 +94,9 @@ class ObatController extends BaseController
         if ($this->request->getMethod() == 'post') {
             $validation = $this->validate([
                 'kode' => [
-                    'rules' => 'required|is_unique[obat.kode]',
+                    'rules' => 'required',
                     'errors' => [
                         'required' => 'Kode obat harus di isi',
-                        'is_unique' => 'Kode obat sudah terdaftar',
                     ]
                 ],
                 'nama' => [
@@ -108,13 +110,6 @@ class ObatController extends BaseController
                     'errors' => [
                         'required' => 'Harga obat harus di isi',
                         'integer' => 'Harga obat harus berupa angka'
-                    ]
-                ],
-                'satuan' => [
-                    'rules' => 'required|integer',
-                    'errors' => [
-                        'required' => 'Satuan obat harus di isi',
-                        'integer' => 'Satuan obat harus berupa angka'
                     ]
                 ],
                 'penggunaan_obat' => [
