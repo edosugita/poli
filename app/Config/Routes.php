@@ -61,10 +61,6 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
             $routes->match(['get', 'post'], 'add', 'PoliController::add');
         });
 
-        // $routes->get('/master/poli', 'PoliController::index');
-        // $routes->match(['get', 'post'], 'master/poli/(:num)/edit', 'PoliController::edit/$1');
-        // $routes->match(['get', 'post'], 'master/poli/add', 'PoliController::add');
-
         // Master | Tindakan
         $routes->group('/master/tindakan', function ($routes) {
             $routes->get('/', 'TindakanController::index');
@@ -80,8 +76,9 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
         });
 
         // Master | Dokter
-        $routes->get('/master/dokter', 'MasterPoli::DataDokter');
-        $routes->get('/master/dokter/edit', 'MasterPoli::EditDokter');
+        $routes->get('/master/dokter', 'DokterController::index');
+        $routes->match(['get', 'post'], '/master/dokter/edit', 'DokterController::edit/$1');
+        $routes->match(['get', 'post'], '/master/dokter/add', 'DokterController::add');
     });
 
     // PASIEN

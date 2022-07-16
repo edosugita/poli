@@ -15,7 +15,7 @@ $this->section('content');
                     <div class="row m-b-30">
                         <div class="col-12 d-flex justify-content-end p-h-30">
                             <div class="row">
-                                <button class="btn btn-primary" data-toggle="modal" data-target="#tambahObat"><i class="anticon anticon-plus m-r-20"></i> Tambah Dokter</button>
+                                <a class="btn btn-primary" href="<?= base_url('/master/dokter/add') ?>"><i class="anticon anticon-plus m-r-20"></i> Tambah Dokter</a>
                             </div>
                         </div>
                     </div>
@@ -171,49 +171,6 @@ $this->section('content');
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-
-<!-- MODAL TAMBAH OBAT -->
-<div class="modal fade" id="tambahObat">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalCenterTitle">Tambah Dokter</h5>
-                <button type="button" class="close" data-dismiss="modal">
-                    <i class="anticon anticon-close"></i>
-                </button>
-            </div>
-            <form method="">
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label for="kodeobat">NPA</label>
-                        <input type="text" class="form-control" id="kodeobat" placeholder="ex: 203875">
-                    </div>
-                    <div class="form-group">
-                        <label for="namaobat">Nama</label>
-                        <input type="text" class="form-control" id="namaobat" placeholder="ex: Dr.Kenny Samitra">
-                    </div>
-                    <div class=" form-group">
-                        <label for="hargaobat">No Telephone</label>
-                        <input type="text" class="form-control" id="hargaobat" placeholder="ex: 081234567890">
-                    </div>
-                    <div class="form-group">
-                        <label for="kode_poli">Spesialis</label>
-                        <select class="select2" id="kode_poli" multiple="multiple">
-                            <option value="Poli A">Poli A</option>
-                            <option value="Poli B">Poli B</option>
-                            <option value="Poli C">Poli C</option>
-                            <option value="Poli D">Poli D</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-hover" style="border: 1px solid #336CFB; color: #336CFB;" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Simpan</button>
-                </div>
-            </form>
         </div>
     </div>
 </div>
