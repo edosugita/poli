@@ -32,10 +32,9 @@ class PoliController extends BaseController
         if ($this->request->getMethod() == 'post') {
             $validation = $this->validate([
                 'kode' => [
-                    'rules' => 'required|is_unique[poli.kode]|min_length[3]|max_length[3]',
+                    'rules' => 'required|min_length[3]|max_length[3]',
                     'errors' => [
                         'required' => 'Kode poli harus di isi',
-                        'is_unique' => 'Kode poli sudah terdaftar',
                         'min_length' => 'Kode poli harus memiliki panjang karakter minimal 3',
                         'max_length' => 'Kode poli harus memiliki panjang karakter maximal 3'
                     ]
