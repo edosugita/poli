@@ -52,7 +52,7 @@ $this->section('content');
                                             <!--                                            <td><button class="btn btn-dark">Action</button></td>-->
                                             <td>
                                                 <a class="btn btn-icon btn-hover btn-sm btn-rounded"
-                                                   href="<?= base_url('/master/dokter/edit') ?>">
+                                                   href="<?= base_url('/master/dokter/' . $dokter['id'] . '/edit' ) ?>">
                                                     <i class="anticon anticon-form" style="color: #336CFB;"></i>
                                                 </a>
                                             </td>
