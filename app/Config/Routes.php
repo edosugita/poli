@@ -76,9 +76,16 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
         });
 
         // Master | Dokter
-        $routes->get('/master/dokter', 'DokterController::index');
-        $routes->match(['get', 'post'], '/master/dokter/edit', 'DokterController::edit/$1');
-        $routes->match(['get', 'post'], '/master/dokter/add', 'DokterController::add');
+        $routes->group('master/dokter', function($routes) {
+            $routes->get('/', 'DokterController::index');
+            $routes->get('add', 'DokterController::add');
+            $routes->post('/', 'DokterController::store');
+            $routes->get('(:num)/edit', 'DokterController::edit/$1');
+            $routes->put('(:num)', 'DokterController::update/$1');
+        });
+//        $routes->get('/master/dokter', 'DokterController::index');
+//        $routes->match(['get', 'post'], '/master/dokter/edit', 'DokterController::edit/$1');
+//        $routes->match(['get', 'post'], '/master/dokter/add', 'DokterController::add');
     });
 
     // PASIEN
