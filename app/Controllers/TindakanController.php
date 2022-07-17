@@ -99,10 +99,9 @@ class TindakanController extends BaseController
         if ($this->request->getMethod() == 'post') {
             $validation = $this->validate([
                 'kode' => [
-                    'rules' => 'required|is_unique[tindakan.kode]',
+                    'rules' => 'required',
                     'errors' => [
                         'required' => 'Kode tindakan harus di isi',
-                        'is_unique' => 'Kode tindakan sudah terdaftar',
                     ]
                 ],
                 'nama' => [
