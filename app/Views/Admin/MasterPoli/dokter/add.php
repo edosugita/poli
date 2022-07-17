@@ -12,27 +12,44 @@ $this->section('content');
                         <h5>Tambah Data Dokter</h5>
                     </div>
                     <hr>
-                    <form method="POST" action="<?= site_url('master/dokter/edit') ?>">
+                    <?php if( !empty( session()->getFlashdata('fail') ) ): ?>
+                        <div class="col-12">
+                            <div class="alert alert-danger alert-dismissible fade show">
+                                <?= session()->getFlashdata('fail'); ?>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+                    <form method="POST" action="<?= site_url('master/dokter') ?>">
                         <div class="form-group">
-                            <label for="kodeobat">NPA</label>
-                            <input type="text" class="form-control" id="kodeobat" placeholder="ex: 203875">
+                            <label for="nomor_induk">Nomor Induk</label>
+                            <input type="text" class="form-control <?= (isset($validation) && $validation->hasError('nomor_induk')) ? 'is-invalid' : null ?>" id="nomor_induk" name="nomor_induk" placeholder="ex: 203875" value="<?= set_value('nomor_induk') ?>">
+                            <div class="invalid-feedback">
+                                <?= (isset($validation)) ? ($validation->getError('no_telp')) : null ?>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="namaobat">Nama</label>
-                            <input type="text" class="form-control" id="namaobat" placeholder="ex: Dr.Kenny Samitra">
+                            <label for="nama">Nama</label>
+                            <input type="text" class="form-control <?= (isset($validation) && $validation->hasError('nama')) ? 'is-invalid' : null ?>" id="nama" name="nama" placeholder="ex: Dr.Kenny Samitra" value="<?= set_value('nama') ?>">
+                            <div class="invalid-feedback">
+                                <?= (isset($validation)) ? ($validation->getError('nama')) : null ?>
+                            </div>
                         </div>
                         <div class=" form-group">
-                            <label for="hargaobat">No Telephone</label>
-                            <input type="text" class="form-control" id="hargaobat" placeholder="ex: 081234567890">
+                            <label for="no_telp">No Telepon</label>
+                            <input type="text" class="form-control <?= (isset($validation) && $validation->hasError('no_telp')) ? 'is-invalid' : null ?>" id="no_telp" name="no_telp" placeholder="ex: 081234567890" value="<?= set_value('no_telp') ?>">
+                            <div class="invalid-feedback">
+                                <?= (isset($validation)) ? ($validation->getError('no_telp')) : null ?>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label>Spesialis</label>
-                            <select class="select2" multiple="multiple">
-                                <option value="Poli A">Poli A</option>
-                                <option value="Poli B">Poli B</option>
-                                <option value="Poli C">Poli C</option>
-                                <option value="Poli D">Poli D</option>
-                            </select>
+                        <div class=" form-group">
+                            <label for="spesialis">Spesialis</label>
+                            <input type="text" class="form-control <?= (isset($validation) && $validation->hasError('spesialis')) ? 'is-invalid' : null ?>" id="spesialis" name="spesialis" placeholder="ex: Gigi" value="<?= set_value('spesialis') ?>">
+                            <div class="invalid-feedback">
+                                <?= (isset($validation)) ? ($validation->getError('spesialis')) : null ?>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-12 d-flex justify-content-end p-h-30">
