@@ -18,11 +18,11 @@ $this->section('content');
                                 <div class="col-12 col-md-6">
                                     <div class="form-group">
                                         <label for="kodetindakan">Nomor RM</label>
-                                        <input type="text" class="form-control" id="kodetindakan" placeholder="ex: 534320">
+                                        <input type="text" class="form-control" id="norm" readonly>
                                     </div>
                                     <div class="form-group">
-                                        <label for="namatindakan">Kode Poli</label>
-                                        <input type="text" class="form-control" id="namatindakan" placeholder="ex: Poli Anak">
+                                        <label for="namatindakan">Nama Poli</label>
+                                        <input type="text" class="form-control" id="kode-poli" readonly>
                                     </div>
                                     <div class="form-group">
                                         <label for="tariftindakan">Tanggal</label>
@@ -33,47 +33,35 @@ $this->section('content');
                                     </div>
                                     <div class="form-group">
                                         <label for="kodepoli">Dokter</label>
-                                        <input type="text" class="form-control" id="kodepoli" placeholder="ex: Alfonso Donin">
+                                        <select class="select2" id="antrian" onchange="data_pasien()">
+                                            <option selected>--- Pilih Nama Dokter ---</option>
+                                            <?php foreach ($dataAntrian as $data) : ?>
+                                                <option value="<?= $data['no_antrian'] ?>"><?= $data['no_antrian'] ?></option>
+                                            <?php endforeach; ?>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="form-group">
-                                        <label for="tindakan1">Antrian</label>
-                                        <select class="select2" name="tindakan1">
-                                            <option value="AP">1</option>
-                                            <option value="NL">2</option>
-                                            <option value="BN">3</option>
-                                            <option value="HL">4</option>
-                                            <option value="HL">5</option>
-                                            <option value="HL">6</option>
-                                            <option value="HL">7</option>
-                                            <option value="HL">8</option>
-                                            <option value="HL">9</option>
-                                            <option value="HL">10</option>
+                                        <label>Antrian</label>
+                                        <select class="select2" id="antrian" onchange="data_pasien()">
+                                            <option selected>--- Pilih No Antrian ---</option>
+                                            <?php foreach ($dataAntrian as $data) : ?>
+                                                <option value="<?= $data['no_antrian'] ?>"><?= $data['no_antrian'] ?></option>
+                                            <?php endforeach; ?>
                                         </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="tindakan1">Nama Pasien</label>
-                                        <select class="select2" name="tindakan1">
-                                            <option value="AP">AA</option>
-                                            <option value="NL">BB</option>
-                                            <option value="BN">CC</option>
-                                            <option value="HL">DD</option>
-                                            <option value="HL">EE</option>
-                                            <option value="HL">FF</option>
-                                            <option value="HL">GG</option>
-                                            <option value="HL">HH</option>
-                                            <option value="HL">II</option>
-                                            <option value="HL">JJ</option>
-                                        </select>
+                                        <input type="text" class="form-control" id="nama" readonly>
                                     </div>
                                     <div class="form-group">
                                         <label for="tariftindakan">Umur</label>
-                                        <input type="text" class="form-control" id="tariftindakan" placeholder="ex: 19">
+                                        <input type="text" class="form-control" id="umur" placeholder="ex: 19">
                                     </div>
                                     <div class="form-group">
                                         <label for="kodepoli">Alamat</label>
-                                        <input type="text" class="form-control" id="kodepoli" placeholder="ex: Surabaya No. 6">
+                                        <input type="text" class="form-control" id="alamat" readonly>
                                     </div>
                                 </div>
                             </div>

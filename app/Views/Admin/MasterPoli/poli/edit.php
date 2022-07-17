@@ -88,7 +88,3 @@ $this->section('content');
 </div>
 
 <?= $this->endSection(); ?>
-
-<?= $this->section('js'); ?>
-<script src="<?= base_url('assets/js/script.js') ?>"></script>
-<?= $this->endSection(); ?>

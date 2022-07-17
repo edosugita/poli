@@ -76,16 +76,16 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
         });
 
         // Master | Dokter
-        $routes->group('master/dokter', function($routes) {
+        $routes->group('master/dokter', function ($routes) {
             $routes->get('/', 'DokterController::index');
             $routes->get('add', 'DokterController::add');
             $routes->post('/', 'DokterController::store');
             $routes->get('(:num)/edit', 'DokterController::edit/$1');
             $routes->put('(:num)', 'DokterController::update/$1');
         });
-//        $routes->get('/master/dokter', 'DokterController::index');
-//        $routes->match(['get', 'post'], '/master/dokter/edit', 'DokterController::edit/$1');
-//        $routes->match(['get', 'post'], '/master/dokter/add', 'DokterController::add');
+        //        $routes->get('/master/dokter', 'DokterController::index');
+        //        $routes->match(['get', 'post'], '/master/dokter/edit', 'DokterController::edit/$1');
+        //        $routes->match(['get', 'post'], '/master/dokter/add', 'DokterController::add');
     });
 
     // PASIEN
@@ -97,7 +97,9 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->get('/riwayat/edit', 'Riwayat::EditRiwayat');
 
     // TINDAKAN
-    $routes->get('/tindakan', 'Tindakan::index');
+    $routes->match(['get', 'post'], '/tindakan', 'Tindakan::index');
+
+    $routes->match(['get', 'post'], '/tindakan/json-data-auto-fill', 'TindakanData::index');
 });
 
 /*

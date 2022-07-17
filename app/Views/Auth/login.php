@@ -11,7 +11,7 @@ $this->section('content');
             </div>
             <div>
                 <h1 class="text-white m-b-20 font-weight-normal">Login Poliklinik</h1>
-                <p class="text-white font-size-16 lh-2 w-80 opacity-08">Climb leg rub face on everything give attitude nap all day for under the bed. Chase mice attack feet but rub face on everything hopped up.</p>
+                <p class="text-white font-size-16 lh-2 w-80 opacity-08">Menjadi Rumah Sakit Rujukan Terdepan Pilihan Utama Masyarakat Dengan Layanan Paripurna Melalui Sistem Pendidikan Kesehatan yang Terintegrasi.</p>
             </div>
             <div class="d-flex justify-content-between">
                 <span class="text-white">© <?= date('Y') ?> RSUD Jombang</span>
@@ -61,8 +61,8 @@ $this->section('content');
                             <label class="font-weight-semibold" for="password">Password</label>
                             <div class="input-affix m-b-10">
                                 <i class="prefix-icon anticon anticon-lock"></i>
-                                <input type="password" class="form-control" placeholder="Password" name="password" value="<?= set_value('password') ?>">
-                                <i class="suffix-icon anticon anticon-eye"></i>
+                                <input type="password" class="form-control" id="form-pw" placeholder="Password" name="password" value="<?= set_value('password') ?>">
+                                <i class="suffix-icon far fa-eye-slash" id="icon-pw" style="cursor: pointer;"></i>
                             </div>
                             <div class="invalid-feedback">
                                 <?= (isset($validation)) ? ($validation->getError('password')) : null ?>
