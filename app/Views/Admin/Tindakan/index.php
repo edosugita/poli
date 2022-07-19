@@ -12,6 +12,26 @@ $this->section('content');
                         <h5>Tindakan Pasien</h5>
                     </div>
                     <hr>
+                    <?php if (!empty(session()->getFlashdata('success'))) : ?>
+                        <div class="col-12">
+                            <div class="alert alert-success alert-dismissible fade show">
+                                <?= session()->getFlashdata('success'); ?>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+                    <?php if (!empty(session()->getFlashdata('fail'))) : ?>
+                        <div class="col-12">
+                            <div class="alert alert-danger alert-dismissible fade show">
+                                <?= session()->getFlashdata('fail'); ?>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                    <?php endif; ?>
                     <div class="m-t-10">
                         <form method="">
                             <div class="row">
@@ -33,10 +53,10 @@ $this->section('content');
                                     </div>
                                     <div class="form-group">
                                         <label for="kodepoli">Dokter</label>
-                                        <select class="select2" id="antrian" onchange="data_pasien()">
-                                            <option selected>--- Pilih Nama Dokter ---</option>
-                                            <?php foreach ($dataAntrian as $data) : ?>
-                                                <option value="<?= $data['no_antrian'] ?>"><?= $data['no_antrian'] ?></option>
+                                        <select class="select2" id="dokter">
+                                            <option value="" selected>--- Pilih Nama Dokter ---</option>
+                                            <?php foreach ($dataDokter as $data) : ?>
+                                                <option value="<?= $data['nama'] ?>"><?= $data['nama'] ?></option>
                                             <?php endforeach; ?>
                                         </select>
                                     </div>
@@ -57,7 +77,7 @@ $this->section('content');
                                     </div>
                                     <div class="form-group">
                                         <label for="tariftindakan">Umur</label>
-                                        <input type="text" class="form-control" id="umur" placeholder="ex: 19">
+                                        <input type="text" class="form-control" id="umur" readonly>
                                     </div>
                                     <div class="form-group">
                                         <label for="kodepoli">Alamat</label>
@@ -71,37 +91,8 @@ $this->section('content');
                     <div class="row m-t-30">
                         <div class="col-12 d-flex justify-content-end p-h-30">
                             <div class="row">
-                                <button class="btn btn-primary" data-toggle="modal" data-target="#tambahObat"><i class="anticon anticon-plus m-r-20"></i> Tindakan</button>
+                                <button id="ttindakan" class="btn btn-primary" onclick="urlTindakan()"><i class="anticon anticon-plus m-r-20"></i> Tindakan</button>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="m-t-30">
-                        <div class="table-responsive">
-                            <table class="table table-borderless">
-                                <thead style="background: #EBF0FF;">
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Kode Poli</th>
-                                        <th>Detail</th>
-                                        <th>Kode Obat</th>
-                                        <th>Kode Tindakan</th>
-                                        <th>Nama Tindakan</th>
-                                        <th>Harga</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th>1</th>
-                                        <td>Poli Anak</td>
-                                        <td>Pegal Linu</td>
-                                        <td>KD01OB</td>
-                                        <td>KD01TD</td>
-                                        <td>Urut</td>
-                                        <td>1.000.000</td>
-                                    </tr>
-                                </tbody>
-                            </table>
                         </div>
                     </div>
                 </div>

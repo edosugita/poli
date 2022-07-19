@@ -98,8 +98,11 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
 
     // TINDAKAN
     $routes->match(['get', 'post'], '/tindakan', 'Tindakan::index');
+    $routes->match(['get', 'post'], '/tindakan/add/(:num)', 'Tindakan::add/$1');
 
     $routes->match(['get', 'post'], '/tindakan/json-data-auto-fill', 'TindakanData::index');
+    $routes->match(['get', 'post'], '/tindakan/json-data-harga-auto-fill', 'TindakanData::HargaObat');
+    $routes->match(['get', 'post'], '/tindakan/json-data-harga-tindakan-auto-fill', 'TindakanData::HargaTindakan');
 });
 
 /*

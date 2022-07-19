@@ -43,7 +43,7 @@ class AntrianModel extends Model
     public function getAntrian($id)
     {
         return $this->db->table('antrian')
-            ->join('data_pasien', 'antrian.no_rm = data_pasien.no_rm')
+            ->join('data_pasien', 'antrian.no_rm = data_pasien.no_rekam_medis')
             ->join('poli', 'poli.id = antrian.id_poli')
             ->where(['poli.id' => $id])
             ->get()->getResultArray();
@@ -52,9 +52,18 @@ class AntrianModel extends Model
     public function getIdAntrian($id)
     {
         return $this->db->table('antrian')
-            ->join('data_pasien', 'antrian.no_rm = data_pasien.no_rm')
+            ->join('data_pasien', 'antrian.no_rm = data_pasien.no_rekam_medis')
             ->join('poli', 'poli.id = antrian.id_poli')
             ->where(['id_antrian' => $id])
+            ->get()->getResultArray();
+    }
+
+    public function getPasien($id)
+    {
+        return $this->db->table('antrian')
+            ->join('data_pasien', 'antrian.no_rm = data_pasien.no_rekam_medis')
+            ->join('poli', 'poli.id = antrian.id_poli')
+            ->where(['no_rm' => $id])
             ->get()->getResultArray();
     }
 }

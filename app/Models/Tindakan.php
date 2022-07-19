@@ -39,4 +39,11 @@ class Tindakan extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+    public function getHargaTindakan($id)
+    {
+        return $this->db->table('tindakan')
+            ->where(['nama' => $id])
+            ->get()->getResultArray();
+    }
 }
