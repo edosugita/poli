@@ -10,13 +10,14 @@ class Pasien extends Migration
     {
         $this->forge->addField(
             [
-                'no_rm' => [
+                'no_rekam_medis' => [
                     'type' => 'INT',
                     'unsigned' => TRUE,
                     'auto_increment' => FALSE
                 ],
-                'id_petugas' => [
-                    'type' => 'INT',
+                'id_desa' => [
+                    'type' => 'CHAR',
+                    'constraint' => '30'
                 ],
                 'id_agama' => [
                     'type' => 'INT',
@@ -29,29 +30,30 @@ class Pasien extends Migration
                     'type' => 'CHAR',
                     'constraint' => '3',
                 ],
-                'nik' => [
+                'id_asuransi' => [
                     'type' => 'INT',
                 ],
-                'nama_petugas' => [
+                'nik' => [
+                    'type' => 'VARCHAR',
+                    'constraint' => '20'
+                ],
+                'nama' => [
                     'type' => 'VARCHAR',
                     'constraint' => '100',
                 ],
                 'jenis_kelamin' => [
                     'type' => 'CHAR',
-                    'constraint' => '255',
+                    'constraint' => '12',
                 ],
                 'tempat_lahir' => [
                     'type' => 'CHAR',
-                    'constraint' => '255',
+                    'constraint' => '100',
                 ],
                 'tanggal_lahir' => [
                     'type' => 'DATE',
                 ],
                 'telepon' => [
                     'type' => 'INT',
-                ],
-                'tanggal_pendafaran' => [
-                    'type' => 'DATE',
                 ],
                 'jenis_pasien' => [
                     'type' => 'CHAR',
@@ -64,22 +66,25 @@ class Pasien extends Migration
                 'nomor_wali' => [
                     'type' => 'INT',
                 ],
-                'status_verifikasi' => [
+                'nomor_asuransi'  => [
                     'type' => 'CHAR',
-                    'constraint' => '255',
+                    'constraint' => '100'
                 ],
-                'berkas_tambahan' => [
-                    'type' => 'CHAR',
-                    'constraint' => '255',
+                'status_perkawinan' => [
+                    'type' => 'VARCHAR',
+                    'constraint' => '100',
                 ],
-                'nomor_asuransi' => [
-                    'type' => 'CHAR',
-                    'constraint' => '255',
+                'alamat_ktp' => [
+                    'type' => 'VARCHAR',
+                    'constraint' => '100',
+                ],
+                'umur' => [
+                    'type' => 'INT',
                 ],
             ]
         );
 
-        $this->forge->addKey('no_rm', TRUE);
+        $this->forge->addKey('no_rekam_medis', TRUE);
         $this->forge->createTable('data_pasien');
     }
 

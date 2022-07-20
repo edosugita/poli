@@ -27,149 +27,22 @@ $this->section('content');
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Carter Vetrovs</td>
-                                        <td>Poli Anak</td>
-                                        <td>Laki-laki</td>
-                                        <td>Sakit Pinggang</td>
-                                        <td>09:15-09:45am</td>
-                                        <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/riwayat/edit') ?>'">
-                                                <i class="anticon anticon-form" style="color: #336CFB;"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Carter Vetrovs</td>
-                                        <td>Poli Anak</td>
-                                        <td>Laki-laki</td>
-                                        <td>Sakit Pinggang</td>
-                                        <td>09:15-09:45am</td>
-                                        <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/riwayat/edit') ?>'">
-                                                <i class="anticon anticon-form" style="color: #336CFB;"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Carter Vetrovs</td>
-                                        <td>Poli Anak</td>
-                                        <td>Laki-laki</td>
-                                        <td>Sakit Pinggang</td>
-                                        <td>09:15-09:45am</td>
-                                        <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/riwayat/edit') ?>'">
-                                                <i class="anticon anticon-form" style="color: #336CFB;"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Carter Vetrovs</td>
-                                        <td>Poli Anak</td>
-                                        <td>Laki-laki</td>
-                                        <td>Sakit Pinggang</td>
-                                        <td>09:15-09:45am</td>
-                                        <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/riwayat/edit') ?>'">
-                                                <i class="anticon anticon-form" style="color: #336CFB;"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Carter Vetrovs</td>
-                                        <td>Poli Anak</td>
-                                        <td>Laki-laki</td>
-                                        <td>Sakit Pinggang</td>
-                                        <td>09:15-09:45am</td>
-                                        <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/riwayat/edit') ?>'">
-                                                <i class="anticon anticon-form" style="color: #336CFB;"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>6</td>
-                                        <td>Carter Vetrovs</td>
-                                        <td>Poli Anak</td>
-                                        <td>Laki-laki</td>
-                                        <td>Sakit Pinggang</td>
-                                        <td>09:15-09:45am</td>
-                                        <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/riwayat/edit') ?>'">
-                                                <i class="anticon anticon-form" style="color: #336CFB;"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>7</td>
-                                        <td>Carter Vetrovs</td>
-                                        <td>Poli Anak</td>
-                                        <td>Laki-laki</td>
-                                        <td>Sakit Pinggang</td>
-                                        <td>09:15-09:45am</td>
-                                        <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/riwayat/edit') ?>'">
-                                                <i class="anticon anticon-form" style="color: #336CFB;"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>8</td>
-                                        <td>Carter Vetrovs</td>
-                                        <td>Poli Anak</td>
-                                        <td>Laki-laki</td>
-                                        <td>Sakit Pinggang</td>
-                                        <td>09:15-09:45am</td>
-                                        <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/riwayat/edit') ?>'">
-                                                <i class="anticon anticon-form" style="color: #336CFB;"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>9</td>
-                                        <td>Carter Vetrovs</td>
-                                        <td>Poli Anak</td>
-                                        <td>Laki-laki</td>
-                                        <td>Sakit Pinggang</td>
-                                        <td>09:15-09:45am</td>
-                                        <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/riwayat/edit') ?>'">
-                                                <i class="anticon anticon-form" style="color: #336CFB;"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>10</td>
-                                        <td>Carter Vetrovs</td>
-                                        <td>Poli Anak</td>
-                                        <td>Laki-laki</td>
-                                        <td>Sakit Pinggang</td>
-                                        <td>09:15-09:45am</td>
-                                        <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/riwayat/edit') ?>'">
-                                                <i class="anticon anticon-form" style="color: #336CFB;"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>11</td>
-                                        <td>Carter Vetrovs</td>
-                                        <td>Poli Anak</td>
-                                        <td>Laki-laki</td>
-                                        <td>Sakit Pinggang</td>
-                                        <td>09:15-09:45am</td>
-                                        <td>
-                                            <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/riwayat/edit') ?>'">
-                                                <i class="anticon anticon-form" style="color: #336CFB;"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
+                                    <?php $i = 1; ?>
+                                    <?php foreach ($dataRiwayat as $data) : ?>
+                                        <tr>
+                                            <td><?= $i++ ?></td>
+                                            <td>Carter Vetrovs</td>
+                                            <td>Poli Anak</td>
+                                            <td>Laki-laki</td>
+                                            <td>Sakit Pinggang</td>
+                                            <td>09:15-09:45am</td>
+                                            <td>
+                                                <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/riwayat/edit') ?>'">
+                                                    <i class="anticon anticon-form" style="color: #336CFB;"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>

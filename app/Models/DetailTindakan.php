@@ -4,17 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class DokterModel extends Model
+class DetailTindakan extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'dokter';
+    protected $table            = 'detail_tindakan_pasien';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
     protected $returnType       = 'array';
-    protected $useSoftDeletes   = true;
+    protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['nomor_induk', 'nama', 'no_telp', 'spesialis'];
+    protected $allowedFields    = ['no_rm', 'kode_poli', 'kode_tindakan', 'kode_obat', 'id_dokter', 'deskripsi'];
 
     // Dates
     protected $useTimestamps = true;
@@ -39,11 +39,4 @@ class DokterModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
-
-    public function getIdDokter($id)
-    {
-        return $this->db->table('dokter')
-            ->where(['nama' => $id])
-            ->get()->getResultArray();
-    }
 }

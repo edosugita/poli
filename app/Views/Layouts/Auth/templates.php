@@ -19,7 +19,7 @@
 <body>
     <div class="app">
         <!-- <div class="container-fluid p-h-0 p-v-20 bg full-height d-flex" style="background-image: url('assets/images/others/login-3.png')"> -->
-        <div class="d-flex flex-column justify-content-between w-100 align-items-center" style="height: 100vh;">
+        <div class="container-fluid p-0 h-100">
 
             <!-- CONTENT -->
             <?= $this->renderSection('content'); ?>
@@ -32,12 +32,14 @@
 
 
     <!-- Core Vendors JS -->
-    <script src="<?= base_url('assets/js/vendors.min.js') ?>"></script>
+    <script src=" <?= base_url('assets/js/vendors.min.js') ?>">
+    </script>
 
     <!-- page js -->
 
     <!-- Core JS -->
     <script src="<?= base_url('assets/js/app.min.js') ?>"></script>
+    <script src="<?= base_url('assets/js/Auth/script.js') ?>"></script>
 
 </body>
 

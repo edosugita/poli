@@ -34,7 +34,7 @@ $this->section('content');
                         </div>
                         <div class="m-l-15">
                             <?php foreach ($countPasien as $data) : ?>
-                                <h2 class="m-b-0"><?= $data['no_rm'] ?></h2>
+                                <h2 class="m-b-0"><?= $data['no_rekam_medis'] ?></h2>
                             <?php endforeach; ?>
                             <p class="m-b-0 text-muted">Pasien</p>
                         </div>

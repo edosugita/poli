@@ -39,4 +39,11 @@ class Obat extends Model
     protected $afterFind = [];
     protected $beforeDelete = [];
     protected $afterDelete = [];
+
+    public function getHargaObat($id)
+    {
+        return $this->db->table('obat')
+            ->where(['nama' => $id])
+            ->get()->getResultArray();
+    }
 }

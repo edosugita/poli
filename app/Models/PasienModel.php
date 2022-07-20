@@ -8,13 +8,13 @@ class PasienModel extends Model
 {
     protected $DBGroup          = 'default';
     protected $table            = 'data_pasien';
-    protected $primaryKey       = 'no_rm';
+    protected $primaryKey       = 'no_rekam_medis';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['id_petugas', 'id_agama', 'id_darah', 'id_pekerjaan', 'nik', 'nama_petugas', 'jenis_kelamin', 'tempat_lahir', 'tanggal_lahir', 'telepon', 'tanggal_pendafaran', 'jenis_pasien', 'nama_wali', 'nomor_wali', 'status_verifikasi', 'berkas_tambahan', 'nomor_asuransi'];
+    protected $allowedFields    = ['no_rekam_medis', 'id_desa', 'id_agama', 'id_darah', 'id_pekerjaan', 'id_asuransi', 'nik', 'nama', 'jenis_kelamin', 'tempat_lahir', 'tanggal_lahir', 'telepon', 'jenis_pasien', 'nama_wali', 'nomor_wali', 'nomor_asuransi', 'status_perkawinan', 'alamat_ktp', 'umur'];
 
     // Dates
     protected $useTimestamps = false;
@@ -42,6 +42,6 @@ class PasienModel extends Model
 
     public function getCount()
     {
-        return $this->db->table('data_pasien')->selectCount('no_rm')->get()->getResultArray();
+        return $this->db->table('data_pasien')->selectCount('no_rekam_medis')->get()->getResultArray();
     }
 }
