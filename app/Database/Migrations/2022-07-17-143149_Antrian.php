@@ -19,6 +19,10 @@ class Antrian extends Migration
                 'constraint' => '16',
                 'unique' => true
             ],
+            'id_poli' => [
+                'type' => 'INT',
+                'unsigned' => TRUE,
+            ],
             'no_antrian' => [
                 'type' => 'VARCHAR',
                 'constraint' => '255'
@@ -31,8 +35,15 @@ class Antrian extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => '255'
             ],
-            'id_poli' => [
-                'type' => 'DATETIME'
+            'created_at' => [
+                'type' => 'DATETIME',
+            ],
+            'updated_at' => [
+                'type' => 'DATETIME',
+            ],
+            'deleted_at' => [
+                'type' => 'DATETIME',
+                'null' => TRUE,
             ],
         ]);
 
