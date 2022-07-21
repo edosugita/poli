@@ -72,13 +72,6 @@ $this->section('content');
                                 <option value="btl">BTL</option>
                             </select>
                         </div>
-                        <div class="form-group">
-                            <label for="penggunaan_obat">Penggunaan Obat</label>
-                            <input type="text" class="form-control <?= (isset($validation)) ? ($validation->hasError('penggunaan_obat')) ? 'is-invalid' : null : null ?>" name="penggunaan_obat" id="penggunaan_obat" placeholder="ex: 1x Sehari" value="<?= set_value('penggunaan_obat'); ?>">
-                            <div class="invalid-feedback">
-                                <?= (isset($validation)) ? ($validation->getError('penggunaan_obat')) : null ?>
-                            </div>
-                        </div>
                         <div class="row">
                             <div class="col-12 d-flex justify-content-end p-h-30">
                                 <div class="row">

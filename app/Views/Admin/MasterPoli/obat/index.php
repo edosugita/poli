@@ -48,7 +48,6 @@ $this->section('content');
                                         <th>Nama Obat</th>
                                         <th>Harga</th>
                                         <th>Satuan</th>
-                                        <th>Penggunaan Obat</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -59,7 +58,6 @@ $this->section('content');
                                             <td><?= $obat["nama"] ?></td>
                                             <td>Rp. <?= number_format($obat['harga'], 2, ',', '.') ?></td>
                                             <td><?= strtoupper($obat["satuan"]) ?></td>
-                                            <td><?= $obat["penggunaan_obat"] ?></td>
                                             <td>
                                                 <a class="btn btn-icon btn-hover btn-sm btn-rounded" href='<?= base_url('master/obat/' . $obat['id'] . '/edit') ?>'>
                                                     <i class="anticon anticon-form" style="color: #336CFB;"></i>

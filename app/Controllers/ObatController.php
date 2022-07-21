@@ -52,12 +52,6 @@ class ObatController extends BaseController
                         'integer' => 'Harga obat harus berupa angka'
                     ]
                 ],
-                'penggunaan_obat' => [
-                    'rules' => 'required',
-                    'errors' => [
-                        'required' => 'Penggunaan obat harus di isi'
-                    ]
-                ],
             ]);
 
             if (!$validation) {
@@ -68,7 +62,6 @@ class ObatController extends BaseController
                     'nama' => $this->request->getVar('nama'),
                     'harga' => $this->request->getVar('harga'),
                     'satuan' => $this->request->getVar('satuan'),
-                    'penggunaan_obat' => $this->request->getVar('penggunaan_obat'),
                 ];
 
                 $query = $this->obat->insert($newData);
