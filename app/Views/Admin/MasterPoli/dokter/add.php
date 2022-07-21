@@ -45,10 +45,15 @@ $this->section('content');
                             </div>
                         </div>
                         <div class=" form-group">
-                            <label for="spesialis">Spesialis</label>
-                            <input type="text" class="form-control <?= (isset($validation) && $validation->hasError('spesialis')) ? 'is-invalid' : null ?>" id="spesialis" name="spesialis" placeholder="ex: Gigi" value="<?= set_value('spesialis') ?>">
+                            <label for="id_poli">Poli</label>
+                            <select name="id_poli" type="" class="select2" id="id_poli">
+                                <option value="" selected>--- Pilih Poli ---</option>
+                                <?php foreach ($dataPoli as $poli) : ?>
+                                    <option value="<?= $poli['id'] ?>"><?= $poli['nama'] ?></option>
+                                <?php endforeach; ?>
+                            </select>
                             <div class="invalid-feedback">
-                                <?= (isset($validation)) ? ($validation->getError('spesialis')) : null ?>
+                                <?= (isset($validation)) ? ($validation->getError('id_poli')) : null ?>
                             </div>
                         </div>
                         <div class="row">
