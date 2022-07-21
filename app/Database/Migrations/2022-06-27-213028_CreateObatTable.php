@@ -29,9 +29,6 @@ class CreateObatTable extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => 10,
             ],
-            'penggunaan_obat' => [
-                'type' => 'TEXT',
-            ],
             'created_at' => [
                 'type' => 'DATETIME'
             ],
