@@ -27,9 +27,9 @@ class CreateDokterTable extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => '12'
             ],
-            'spesialis' => [
-                'type' => 'VARCHAR',
-                'constraint' => '255'
+            'id_poli' => [
+                'type' => 'int',
+                'unsigned' => true
             ],
             'created_at' => [
                 'type' => 'DATETIME'
@@ -44,6 +44,7 @@ class CreateDokterTable extends Migration
         ]);
 
         $this->forge->addKey('id', true);
+        $this->forge->addForeignKey('id_poli', 'poli', 'id');
         $this->forge->createTable('dokter');
     }
 
