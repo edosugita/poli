@@ -17,23 +17,25 @@ class DetailTindakan extends Migration
                 'type' => 'INT',
                 'constraint' => '10',
             ],
-            'kode_poli' => [
-                'type' => 'VARCHAR',
-                'constraint' => '255',
+            'id_antrian' => [
+                'type' => 'int'
             ],
             'kode_tindakan' => [
                 'type' => 'VARCHAR',
                 'constraint' => '255',
+                'null' => true
             ],
             'kode_obat' => [
                 'type' => 'VARCHAR',
                 'constraint' => '255',
+                'null' => true
             ],
             'id_dokter' => [
                 'type' => 'INT',
             ],
             'deskripsi' => [
                 'type' => 'TEXT',
+                'null' => true
             ],
             'created_at' => [
                 'type' => 'DATETIME'
