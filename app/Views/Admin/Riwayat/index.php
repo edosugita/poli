@@ -19,10 +19,6 @@ $this->section('content');
                                     <tr>
                                         <th>No</th>
                                         <th>Nama Pasien</th>
-                                        <th>Nama Poli</th>
-                                        <th>Jenis Kelamin</th>
-                                        <th>Keluhan</th>
-                                        <th>Tanggal Kunjungan</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -31,15 +27,11 @@ $this->section('content');
                                     <?php foreach ($dataRiwayat as $data) : ?>
                                         <tr>
                                             <td><?= $i++ ?></td>
-                                            <td>Carter Vetrovs</td>
-                                            <td>Poli Anak</td>
-                                            <td>Laki-laki</td>
-                                            <td>Sakit Pinggang</td>
-                                            <td>09:15-09:45am</td>
+                                            <td><?= $data['nama_pasien'] ?></td>
                                             <td>
-                                                <button class="btn btn-icon btn-hover btn-sm btn-rounded" onclick="location.href='<?= base_url('/riwayat/edit') ?>'">
-                                                    <i class="anticon anticon-form" style="color: #336CFB;"></i>
-                                                </button>
+                                                <a class="btn btn-dark btn-hover" href="<?= base_url('/riwayat/' . $data['no_rm']) ?>">
+                                                    Detail
+                                                </a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

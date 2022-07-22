@@ -90,7 +90,6 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
 
     // RIWAYAT
     $routes->get('/riwayat', 'Riwayat::index');
-    $routes->get('/riwayat/edit', 'Riwayat::EditRiwayat');
 
     // TINDAKAN
     $routes->group('tindakan', function ($routes) {
