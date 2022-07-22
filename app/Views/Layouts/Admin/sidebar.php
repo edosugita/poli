@@ -37,6 +37,7 @@
                     </ul>
                 </li>
             <?php endif; ?>
+            <?php if (session()->get('status') == 0) : ?>
             <li class="nav-item">
                 <a href="<?= base_url('/tindakan') ?>">
                     <span class="icon-holder">
@@ -45,6 +46,7 @@
                     <span class="title">Tindakan</span>
                 </a>
             </li>
+            <?php endif; ?>
             <li class="nav-item">
                 <a href="<?= base_url('/riwayat') ?>">
                     <span class="icon-holder">
