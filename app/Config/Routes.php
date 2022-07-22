@@ -88,10 +88,6 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
         //        $routes->match(['get', 'post'], '/master/dokter/add', 'DokterController::add');
     });
 
-    // PASIEN
-    $routes->get('/pasien', 'Pasien::index');
-    $routes->get('/pasien/edit', 'Pasien::EditPasien');
-
     // RIWAYAT
     $routes->get('/riwayat', 'Riwayat::index');
     $routes->get('/riwayat/edit', 'Riwayat::EditRiwayat');
