@@ -92,3 +92,93 @@ const hargaTindakan = () => {
         $('#HargaTindakan').val('0')
     }
 }
+
+$(document).on('click', '.btn-add-tindakan-to-cart', function(e) {
+    let idTindakan = $(this).attr('data-tindakan-id')
+    const tindakanRow = $(this).parents('tr').children()
+    const kodeTindakan = $(tindakanRow[0]).text()
+    let namaTindakan = $(tindakanRow[1]).text()
+    let tarifTindakan = $(tindakanRow[2]).text()
+
+    $('#tindakan-cart').append(`
+        <tr>
+            <input type="hidden" name="array_kode_tindakan[]" value="${kodeTindakan}">
+            <td>${kodeTindakan}</td>
+            <td>${namaTindakan}</td>
+            <td>${tarifTindakan}</td>
+            <td>
+                <button type="button" class="btn btn-primary btn-move-tindakan-to-modal" data-tindakan-id="${idTindakan}">Hapus</button>
+            </td>
+        </tr>
+    `)
+
+    $(this).parents('tr').remove()
+})
+
+$(document).on('click', '.btn-move-tindakan-to-modal', function() {
+    let idTindakan = $(this).attr('data-tindakan-id')
+    const tindakanRow = $(this).parents('tr').children()
+    const kodeTindakan = $(tindakanRow[0]).text()
+    let namaTindakan = $(tindakanRow[1]).text()
+    let tarifTindakan = $(tindakanRow[2]).text()
+
+    $('#tindakan-modal').append(`
+        <tr>
+            <td>${kodeTindakan}</td>
+            <td>${namaTindakan}</td>
+            <td>${tarifTindakan}</td>
+            <td>
+                <button type="button" class="btn btn-primary btn-add-tindakan-to-cart" data-tindakan-id="${idTindakan}">Hapus</button>
+            </td>
+        </tr>
+    `)
+
+    $(this).parents('tr').remove()
+})
+
+$(document).on('click', '.btn-add-obat-to-cart', function(e) {
+    let idObat = $(this).attr('data-obat-id')
+    const obatRow = $(this).parents('tr').children()
+    const kodeObat = $(obatRow[0]).text()
+    let namaObat = $(obatRow[1]).text()
+    let hargaObat = $(obatRow[2]).text()
+    let satuanObat = $(obatRow[3]).text()
+
+    $('#obat-cart').append(`
+        <tr>
+            <input type="hidden" name="array_kode_obat[]" value="${kodeObat}">
+            <td>${kodeObat}</td>
+            <td>${namaObat}</td>
+            <td>${hargaObat}</td>
+            <td>${satuanObat}</td>
+            <td>
+                <button type="button" class="btn btn-primary btn-move-tindakan-to-modal" data-obat-id="${idObat}">Hapus</button>
+            </td>
+        </tr>
+    `)
+
+    $(this).parents('tr').remove()
+})
+
+$(document).on('click', '.btn-move-obat-to-modal', function() {
+    let idObat = $(this).attr('data-obat-id')
+    const obatRow = $(this).parents('tr').children()
+    const kodeObat = $(obatRow[0]).text()
+    let namaObat = $(obatRow[1]).text()
+    let hargaObat = $(obatRow[2]).text()
+    let satuanObat = $(obatRow[3]).text()
+
+    $('#obat-modal').append(`
+        <tr>
+            <td>${kodeObat}</td>
+            <td>${namaObat}</td>
+            <td>${hargaObat}</td>
+            <td>${satuanObat}</td>
+            <td>
+                <button type="button" class="btn btn-primary btn-add-tindakan-to-cart" data-obat-id="${idObat}">Hapus</button>
+            </td>
+        </tr>
+    `)
+
+    $(this).parents('tr').remove()
+})

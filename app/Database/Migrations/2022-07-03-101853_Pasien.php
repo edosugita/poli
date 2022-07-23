@@ -37,7 +37,7 @@ class Pasien extends Migration
                     'type' => 'VARCHAR',
                     'constraint' => '20'
                 ],
-                'nama' => [
+                'nama_pasien' => [
                     'type' => 'VARCHAR',
                     'constraint' => '100',
                 ],
@@ -74,7 +74,7 @@ class Pasien extends Migration
                     'type' => 'VARCHAR',
                     'constraint' => '100',
                 ],
-                'alamat_ktp' => [
+                'alamat' => [
                     'type' => 'VARCHAR',
                     'constraint' => '100',
                 ],

@@ -37,7 +37,7 @@ $this->section('content');
                                         <th>NPA</th>
                                         <th>Nama</th>
                                         <th>No Telephone</th>
-                                        <th>Spesialis</th>
+                                        <th>Poli</th>
                                         <th>Action</th>
                                     </tr>
                                     </thead>
@@ -46,9 +46,9 @@ $this->section('content');
                                         <tr>
                                             <td><?= $index + 1 ?></td>
                                             <td><?= $dokter['nomor_induk'] ?></td>
-                                            <td><?= $dokter['nama'] ?></td>
+                                            <td><?= $dokter['nama_dokter'] ?></td>
                                             <td><?= $dokter['no_telp'] ?></td>
-                                            <td><?= $dokter['spesialis'] ?></td>
+                                            <td><?= $dokter['nama_poli'] ?></td>
                                             <!--                                            <td><button class="btn btn-dark">Action</button></td>-->
                                             <td>
                                                 <a class="btn btn-icon btn-hover btn-sm btn-rounded"

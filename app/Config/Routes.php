@@ -88,16 +88,14 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
         //        $routes->match(['get', 'post'], '/master/dokter/add', 'DokterController::add');
     });
 
-    // PASIEN
-    $routes->get('/pasien', 'Pasien::index');
-    $routes->get('/pasien/edit', 'Pasien::EditPasien');
-
     // RIWAYAT
     $routes->get('/riwayat', 'Riwayat::index');
-    $routes->get('/riwayat/edit', 'Riwayat::EditRiwayat');
 
     // TINDAKAN
-    $routes->match(['get', 'post'], '/tindakan', 'Tindakan::index');
+    $routes->group('tindakan', function ($routes) {
+        $routes->get('/', 'Tindakan::index');
+        $routes->post('/', 'Tindakan::store');
+    });
     $routes->match(['get', 'post'], '/tindakan/add/(:num)', 'Tindakan::add/$1');
 
     $routes->match(['get', 'post'], '/tindakan/json-data-auto-fill', 'TindakanData::index');

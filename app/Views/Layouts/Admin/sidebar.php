@@ -37,6 +37,7 @@
                     </ul>
                 </li>
             <?php endif; ?>
+            <?php if (session()->get('status') == 0) : ?>
             <li class="nav-item">
                 <a href="<?= base_url('/tindakan') ?>">
                     <span class="icon-holder">
@@ -45,6 +46,7 @@
                     <span class="title">Tindakan</span>
                 </a>
             </li>
+            <?php endif; ?>
             <li class="nav-item">
                 <a href="<?= base_url('/riwayat') ?>">
                     <span class="icon-holder">
@@ -54,14 +56,6 @@
                 </a>
             </li>
             <?php if (session()->get('status') == 1) : ?>
-                <li class="nav-item">
-                    <a href="<?= base_url('/pasien') ?>">
-                        <span class="icon-holder">
-                            <i class="anticon anticon-team"></i>
-                        </span>
-                        <span class="title">Pasien</span>
-                    </a>
-                </li>
                 <li class="nav-item dropdown">
                     <a class="dropdown-toggle" href="javascript:void(0);">
                         <span class="icon-holder">
